@@ -1,0 +1,59 @@
+
+{
+  "api": {
+    "class_name": "EasyTrackingProvider",
+    "modules": [
+      "EasyTracking"
+    ]
+  },
+  "assets": {
+    "fields": [
+
+    ]
+  },
+  "author_email": "roei.carmel@msapps.mobi",
+  "author_name": "Roei Carmel",
+  "custom_configuration_fields": [
+
+  ],
+  "dependency_name": "EasyTracking",
+  "dependency_repository_url": [
+    "git@github.com:applicaster-plugins/EasyTracking-iOS.git"
+  ],
+  "dependency_version": "0.1.0",
+  "deprecated_since_zapp_sdk": "",
+  "description": "Main Analytics plugin for pro7 team",
+  "extra_dependencies": [
+
+  ],
+  "identifier": "prosieben_easy_tracking",
+  "manifest_version": "0.1.0",
+  "min_zapp_sdk": "13.0.0-Dev",
+  "name": "Easy Tracking",
+  "npm_dependencies": [
+
+  ],
+  "platform": "ios",
+  "project_dependencies": [
+
+  ],
+  "react_native": false,
+  "rules": {
+    "fields": [
+
+    ]
+  },
+  "type": "analytics",
+  "unsupported_since_zapp_sdk": "",
+  "whitelisted_account_ids": [
+      "59784f3d2a141d000d587f77",
+      "5818cf82279a4a000ff1b6aa"
+  ],
+  "ui_builder_support": true,
+  "general": {
+
+  },
+  "targets": [
+    "mobile"
+  ]
+}
