@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.static_framework = true
 
-  s.source_files  = 'Classes/**/*.{h,m,swift}'
-  s.resources = [ 'Resources/**/*.{xib,png}']
+  s.source_files  = 'EasyTracking/**/*.{h,m,swift}'
+  s.resources = [ 'EasyTracking/**/*.{xib,png}']
 
   s.xcconfig =  {
                   'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
