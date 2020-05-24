@@ -1,0 +1,81 @@
+PODS:
+  - Alamofire (4.9.1)
+  - ApplicasterSDK (12.3.3):
+    - Alamofire (= 4.9.1)
+    - CocoaLumberjack/Swift (= 3.5.3)
+    - FBSDKCoreKit (= 5.15.1)
+    - FBSDKLoginKit (= 5.15.1)
+    - FBSDKShareKit (= 5.15.1)
+    - SSZipArchive (= 2.1.0)
+    - TTTAttributedLabel (= 2.1.0)
+    - TwitterKit (= 3.4.2)
+    - ZappPlugins (~> 11.6.6)
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
+    - CocoaLumberjack/Core
+  - EasyTracking (0.1.0):
+    - ApplicasterSDK
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKShareKit (5.15.1):
+    - FBSDKShareKit/Share (= 5.15.1)
+  - FBSDKShareKit/Share (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
+  - SSZipArchive (2.1.0)
+  - TTTAttributedLabel (2.1.0)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
+  - ZappCore (0.9.16)
+  - ZappPlugins (11.6.7):
+    - ZappCore
+
+DEPENDENCIES:
+  - EasyTracking (from `EasyTracking.podspec`)
+
+SPEC REPOS:
+  "git@github.com:applicaster/CocoaPods.git":
+    - ApplicasterSDK
+    - TTTAttributedLabel
+    - ZappCore
+    - ZappPlugins
+  https://cdn.cocoapods.org/:
+    - Alamofire
+    - CocoaLumberjack
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - SSZipArchive
+    - TwitterCore
+    - TwitterKit
+
+EXTERNAL SOURCES:
+  EasyTracking:
+    :path: EasyTracking.podspec
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ApplicasterSDK: 47aa0e0ec70efd7f0fc3799fbe8ef41ba08f8a23
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  EasyTracking: 2f93eb7b46753a3229d8cf496c5105efa109affd
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
+  FBSDKShareKit: 259737eab3cc807087374553abdf588b3096ba55
+  SSZipArchive: 1e8e53dcb11bca3ded4738958dc49fc467320a14
+  TTTAttributedLabel: f8c7f1dbc7b8f7168e23e8b4764dda2e3b74aae8
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
+  ZappCore: 8d057418e422657f7521689b6a2844e31baede88
+  ZappPlugins: 2abfd1e32208a1ad5411b67edc8483e7b74e3aa3
+
+PODFILE CHECKSUM: e28b95151dc30efcffe27825a6b61c1c6b1c5282
+
+COCOAPODS: 1.7.5

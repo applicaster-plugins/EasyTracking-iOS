@@ -1,0 +1,97 @@
+# iOS CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/ios-migrating-from-1-2/ for more details
+#
+version: 2
+jobs:
+  build:
+
+    # Specify the Xcode version to use
+    macos:
+      xcode: "11.2.1"
+    shell: /bin/bash --login -eo pipefail
+    environment:
+      - PROJECT_NAME: "EasyTracking"
+      - SCRIPTS_LOCAL_FOLDER: "~/.scripts-iOS"
+      - SCRIPTS_REPO_PATH: "git@github.com:applicaster/Scripts-iOS.git"
+      - DEPLOY_VERSION: "0.9.1"
+      - DEPLOY_COMMAND: "~/.scripts-iOS/circleCi/deploySinglePlugin.sh"
+    working_directory: ~/EasyTracking-iOS
+
+    steps:
+      - checkout
+
+      # Prepere Git and Submodules
+      - restore_cache:
+          name: Git - restore cache
+          key: Zapp-EasyTracking-v1-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
+          keys:
+            - Zapp-EasyTracking-v1-{{ .Branch }}-{{ .Revision }}
+            - Zapp-EasyTracking-v1-{{ .Branch }}-
+            - Zapp-EasyTracking-v1-
+
+      - checkout
+
+      - save_cache:
+          name: Git - save cache
+          key: Zapp-EasyTracking-v1-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
+          paths:
+            - ".git"
+
+      - run:
+          name: Adding scripts
+          command: |
+            if [ ! -d "$SCRIPTS_LOCAL_FOLDER" ]; then
+              git clone $SCRIPTS_REPO_PATH $SCRIPTS_LOCAL_FOLDER
+            else
+              echo "Repo exists in local path: $SCRIPTS_LOCAL_FOLDER"
+              git -C $SCRIPTS_LOCAL_FOLDER fetch
+              git -C $SCRIPTS_LOCAL_FOLDER fetch --tags
+              git -C $SCRIPTS_LOCAL_FOLDER checkout
+              git -C $SCRIPTS_LOCAL_FOLDER pull origin master
+            fi
+            git -C $SCRIPTS_LOCAL_FOLDER checkout $DEPLOY_VERSION
+  
+      - run:
+          name: Git - submodules update
+          command: |
+            git fetch
+            git checkout .
+            git submodule sync --recursive
+            git submodule update --init
+
+      - run:
+          name: Bundler - install dependencies
+          command: bundle install
+
+      - run:
+          name: CocoaPods - version
+          command: bundle exec pod --version
+
+      # Pod update
+      - run:
+          name: CocoaPods - update dependencies
+          command: bundle exec pod update
+
+       # Tests
+      - run:
+          name: Tests - Start
+          command: bundle exec fastlane ios test 
+
+      # Collect XML test results data to show in the UI,
+      # and save the same XML files under test-results folder
+      # in the Artifacts tab
+      - store_test_results:
+          path: test_output/report.xml
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: scan-test-results
+      - store_artifacts:
+          path: ~/Library/Logs/scan
+          destination: scan-logs
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
