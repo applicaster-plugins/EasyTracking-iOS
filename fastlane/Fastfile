@@ -11,7 +11,7 @@ platform :ios do
       workspace: "#{ENV['PROJECT_NAME']}.xcworkspace",
       scheme: ENV['PROJECT_NAME'],
       output_directory: "CircleArtifacts/test-results",
-      device: "iPhone 7",
+      device: "iPhone 8",
       xcargs: "-quiet",
       code_coverage: true
     )
