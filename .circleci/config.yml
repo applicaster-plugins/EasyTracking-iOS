@@ -19,22 +19,28 @@ jobs:
     working_directory: ~/EasyTracking-iOS
 
     steps:
-      - checkout
+      - run:
+          name: Ruby - set version
+          command:  echo "ruby-2.5" > ~/.ruby-version
+
+      - run:
+          name: Ruby - version
+          command:  ruby -v
 
       # Prepere Git and Submodules
       - restore_cache:
           name: Git - restore cache
-          key: Zapp-EasyTracking-v2-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
+          key: Zapp-EasyTracking-v1-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
           keys:
-            - Zapp-EasyTracking-v2-{{ .Branch }}-{{ .Revision }}
-            - Zapp-EasyTracking-v2-{{ .Branch }}-
-            - Zapp-EasyTracking-v2-
+            - Zapp-EasyTracking-v1-{{ .Branch }}-{{ .Revision }}
+            - Zapp-EasyTracking-v1-{{ .Branch }}-
+            - Zapp-EasyTracking-v1-
 
       - checkout
 
       - save_cache:
           name: Git - save cache
-          key: Zapp-EasyTracking-v2-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
+          key: Zapp-EasyTracking-v1-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
           paths:
             - ".git"
 
@@ -51,44 +57,79 @@ jobs:
               git -C $SCRIPTS_LOCAL_FOLDER pull origin master
             fi
             git -C $SCRIPTS_LOCAL_FOLDER checkout $DEPLOY_VERSION
-  
+      # Add know host relevant for Prosieben only
+      - run:
+          name: Add known hosts
+          command: $SCRIPTS_LOCAL_FOLDER/circleCi/addKnownHosts.sh
+
+      # Prepare Bundler
+      - restore_cache:
+          name: Bundler - restore cache
+          key: Zapp-EasyTracking-v1-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Bundler - install dependencies
+          command: bundle install
+
+      - save_cache:
+          name: Bundler - save cache
+          key: Zapp-EasyTracking-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - /Users/distiller/.rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems
+
+      # Restore Cocoapods cache, save cache on lower level, after pod update
+      - restore_cache:
+          name: CocoaPods - restore cache
+          key: Zapp-EasyTracking-CocoaPods-1
+
+      - run:
+          name: CocoaPods - version
+          command: bundle exec pod --version
+
       - run:
           name: Git - submodules update
           command: |
             git fetch
             git checkout .
             git submodule sync --recursive
-            git submodule update --init
-
-      - run:
-          name: Bundler - install dependencies
-          command: bundle install
-
-      - run:
-          name: CocoaPods - version
-          command: bundle exec pod --version
-
+            git submodule update --init --recursive
       # Pod update
       - run:
           name: CocoaPods - update dependencies
           command: bundle exec pod update
 
-       # Tests
-      - run:
-          name: Tests - Start
-          command: bundle exec fastlane ios test 
+      # Cache CocoaPods
+      - save_cache:
+          name: CocoaPods - save cache
+          key: Zapp-EasyTracking-CocoaPods-1
+          paths:
+            - "~/.cocoapods"
+            - "Pods"
+            - "Podfile.lock"
 
-      # Collect XML test results data to show in the UI,
-      # and save the same XML files under test-results folder
-      # in the Artifacts tab
+      # Tests
+      - run:
+          name: Tests - start
+          command: bundle exec fastlane ios test
+
+      # Deploy
+      - deploy:
+          name: Creating Closed SDK version
+          command: |
+            if [ "$CIRCLE_BRANCH" = "master" ];
+            then
+              echo "Execute deploy script"
+              $DEPLOY_COMMAND $PROJECT_NAME
+            else
+              echo "Branch is not master, deploy process will be skipped"
+            fi
       - store_test_results:
-          path: test_output/report.xml
+          name: Test results - collecting
+          path: ./CircleArtifacts/test-results
+
       - store_artifacts:
-          path: /tmp/test-results
-          destination: scan-test-results
-      - store_artifacts:
-          path: ~/Library/Logs/scan
-          destination: scan-logs
+          name: Artifacts - collecting
+          path: ./CircleArtifacts
 
 workflows:
   version: 2
