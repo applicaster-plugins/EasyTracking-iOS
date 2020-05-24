@@ -23,6 +23,6 @@ Pod::Spec.new do |s|
                 }
 
   s.dependency 'ApplicasterSDK'
-  # s.dependency 'EasyTracking/EchoTracker'
+   # s.dependency 'EasyTracking/EchoTracker'
 
 end
