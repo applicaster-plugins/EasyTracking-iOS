@@ -24,17 +24,17 @@ jobs:
       # Prepere Git and Submodules
       - restore_cache:
           name: Git - restore cache
-          key: Zapp-EasyTracking-v1-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
+          key: Zapp-EasyTracking-v2-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
           keys:
-            - Zapp-EasyTracking-v1-{{ .Branch }}-{{ .Revision }}
-            - Zapp-EasyTracking-v1-{{ .Branch }}-
-            - Zapp-EasyTracking-v1-
+            - Zapp-EasyTracking-v2-{{ .Branch }}-{{ .Revision }}
+            - Zapp-EasyTracking-v2-{{ .Branch }}-
+            - Zapp-EasyTracking-v2-
 
       - checkout
 
       - save_cache:
           name: Git - save cache
-          key: Zapp-EasyTracking-v1-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
+          key: Zapp-EasyTracking-v2-{{ .Branch }}-{{ .Revision }}-{{ .Environment.version_id }}
           paths:
             - ".git"
 
