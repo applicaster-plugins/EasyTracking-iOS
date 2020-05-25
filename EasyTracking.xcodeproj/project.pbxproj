@@ -10,7 +10,6 @@
 		1DFADA00247A6AB60098BF88 /* EasyTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFAD9F6247A6AB60098BF88 /* EasyTracking.framework */; };
 		1DFADA05247A6AB60098BF88 /* EasyTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFADA04247A6AB60098BF88 /* EasyTrackingTests.swift */; };
 		1DFADA07247A6AB60098BF88 /* EasyTracking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFAD9F9247A6AB60098BF88 /* EasyTracking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DFADA10247AF96B0098BF88 /* EasyTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFAD9F6247A6AB60098BF88 /* EasyTracking.framework */; };
 		5392E7ABDD16E2436D727FA1 /* Pods_EasyTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA090F77D65B09C72E23603 /* Pods_EasyTracking.framework */; };
 		FCFE24856F6B4576173C02D2 /* Pods_EasyTracking_EasyTrackingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6AFEFDB7D0A477E53210E4 /* Pods_EasyTracking_EasyTrackingTests.framework */; };
 /* End PBXBuildFile section */
@@ -46,7 +45,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5392E7ABDD16E2436D727FA1 /* Pods_EasyTracking.framework in Frameworks */,
-				1DFADA10247AF96B0098BF88 /* EasyTracking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
