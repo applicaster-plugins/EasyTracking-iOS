@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07D8A6E6247CF9CE00B238C6 /* EasyTrackingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8A6E5247CF9CE00B238C6 /* EasyTrackingProvider.swift */; };
 		1DFADA00247A6AB60098BF88 /* EasyTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFAD9F6247A6AB60098BF88 /* EasyTracking.framework */; };
 		1DFADA05247A6AB60098BF88 /* EasyTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFADA04247A6AB60098BF88 /* EasyTrackingTests.swift */; };
 		1DFADA07247A6AB60098BF88 /* EasyTracking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFAD9F9247A6AB60098BF88 /* EasyTracking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07D8A6E5247CF9CE00B238C6 /* EasyTrackingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTrackingProvider.swift; sourceTree = "<group>"; };
 		1DFAD9F6247A6AB60098BF88 /* EasyTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFAD9F9247A6AB60098BF88 /* EasyTracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyTracking.h; sourceTree = "<group>"; };
 		1DFAD9FA247A6AB60098BF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				1DFAD9F9247A6AB60098BF88 /* EasyTracking.h */,
+				07D8A6E5247CF9CE00B238C6 /* EasyTrackingProvider.swift */,
 				1DFAD9FA247A6AB60098BF88 /* Info.plist */,
 			);
 			path = EasyTracking;
@@ -141,7 +144,6 @@
 				1DFAD9F2247A6AB60098BF88 /* Sources */,
 				1DFAD9F3247A6AB60098BF88 /* Frameworks */,
 				1DFAD9F4247A6AB60098BF88 /* Resources */,
-				D430C46DB5897323071854DB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,7 +163,6 @@
 				1DFAD9FC247A6AB60098BF88 /* Frameworks */,
 				1DFAD9FD247A6AB60098BF88 /* Resources */,
 				446133FC650B4F8543B9FFBA /* [CP] Embed Pods Frameworks */,
-				B28246C3FFB8A365E86DA0F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,6 +186,7 @@
 				TargetAttributes = {
 					1DFAD9F5247A6AB60098BF88 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					1DFAD9FE247A6AB60098BF88 = {
 						CreatedOnToolsVersion = 11.5;
@@ -289,40 +291,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B28246C3FFB8A365E86DA0F4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTracking-EasyTrackingTests/Pods-EasyTracking-EasyTrackingTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTracking-EasyTrackingTests/Pods-EasyTracking-EasyTrackingTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyTracking-EasyTrackingTests/Pods-EasyTracking-EasyTrackingTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D430C46DB5897323071854DB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTracking/Pods-EasyTracking-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTracking/Pods-EasyTracking-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyTracking/Pods-EasyTracking-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -330,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D8A6E6247CF9CE00B238C6 /* EasyTrackingProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E9F177B6C04C21F023C7C03F /* Pods-EasyTracking.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -495,6 +465,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8ED6C7B038373EB1A37DEF1A /* Pods-EasyTracking.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -532,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EB0DEF563568FB9D1D16958 /* Pods-EasyTracking-EasyTrackingTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EasyTrackingTests/Info.plist;
@@ -553,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC1E9B0FD264394BD02AF5D5 /* Pods-EasyTracking-EasyTrackingTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EasyTrackingTests/Info.plist;

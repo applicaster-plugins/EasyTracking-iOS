@@ -5,8 +5,7 @@
 // Created by Roei on 20/05/2020.
 //
 import Foundation
-
-import ApplicasterSDK
+import ZappPlugins
 
 @objc public class EasyTrackingProvider: NSObject, ZPAnalyticsProviderProtocol {
    

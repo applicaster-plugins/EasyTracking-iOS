@@ -9,7 +9,7 @@ target 'EasyTracking' do
   use_frameworks!
 
   # Pods for EasyTracking
-pod 'ApplicasterSDK'
+  pod 'ZappPlugins'
 
 
   target 'EasyTrackingTests' do
