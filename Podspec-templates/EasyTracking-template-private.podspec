@@ -18,3 +18,5 @@ Pod::Spec.new do |s|
                     'SWIFT_VERSION' => '__swift_version__'
               }
   s.dependency 'ApplicasterSDK'
+
+end

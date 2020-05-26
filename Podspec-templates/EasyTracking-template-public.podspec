@@ -25,3 +25,5 @@ Pod::Spec.new do |s|
               }
 
   # addtional dependencies
+
+end
