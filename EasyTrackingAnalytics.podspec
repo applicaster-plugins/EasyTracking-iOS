@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "EasyTracking"
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = "EasyTracking"
   s.description      = <<-DESC
                         EasyTracking.
@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.static_framework = true
 
-  s.source_files  = 'EasyTracking/**/*.{h,m,swift}'
-  s.resources = [ 'EasyTracking/**/*.{xib,png}']
+  s.source_files  = 'EasyTrackingAnalytics/**/*.{h,m,swift}'
+  s.resources = [ 'EasyTrackingAnalytics/**/*.{xib,png}']
 
   s.xcconfig =  {
                   'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
@@ -23,6 +23,8 @@ Pod::Spec.new do |s|
                 }
 
   s.dependency 'ApplicasterSDK'
-  # s.dependency 'EasyTracking/EchoTracker'
+  s.dependency 'EasyTracking'
+  s.dependency 'EasyTracking/EchoTracker'
+
 
 end

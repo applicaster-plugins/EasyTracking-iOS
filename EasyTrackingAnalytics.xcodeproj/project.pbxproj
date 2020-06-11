@@ -11,8 +11,8 @@
 		1DFADA00247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFAD9F6247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework */; };
 		1DFADA05247A6AB60098BF88 /* EasyTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFADA04247A6AB60098BF88 /* EasyTrackingTests.swift */; };
 		1DFADA07247A6AB60098BF88 /* EasyTracking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFAD9F9247A6AB60098BF88 /* EasyTracking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5392E7ABDD16E2436D727FA1 /* Pods_EasyTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA090F77D65B09C72E23603 /* Pods_EasyTracking.framework */; };
-		FCFE24856F6B4576173C02D2 /* Pods_EasyTracking_EasyTrackingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6AFEFDB7D0A477E53210E4 /* Pods_EasyTracking_EasyTrackingTests.framework */; };
+		54F32147C437E60E051E3476 /* Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C46BA124BD433A57A29A9 /* Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework */; };
+		F4D62F3DDB233883A9B5DE9F /* Pods_EasyTrackingAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A004CC9766B40C7CD7AEA3E /* Pods_EasyTrackingAnalytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +27,21 @@
 
 /* Begin PBXFileReference section */
 		07D8A6E5247CF9CE00B238C6 /* EasyTrackingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTrackingProvider.swift; sourceTree = "<group>"; };
+		143C46BA124BD433A57A29A9 /* Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFAD9F6247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyTrackingAnalyticsAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFAD9F9247A6AB60098BF88 /* EasyTracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyTracking.h; sourceTree = "<group>"; };
 		1DFAD9FA247A6AB60098BF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DFAD9FF247A6AB60098BF88 /* EasyTrackingAnalyticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyTrackingAnalyticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFADA04247A6AB60098BF88 /* EasyTrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTrackingTests.swift; sourceTree = "<group>"; };
 		1DFADA06247A6AB60098BF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AA090F77D65B09C72E23603 /* Pods_EasyTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		256137E755C2BBD3B83729EB /* Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.release.xcconfig"; path = "Target Support Files/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A004CC9766B40C7CD7AEA3E /* Pods_EasyTrackingAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTrackingAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FCA58ECEA6B30D97E75B47D /* Pods-EasyTrackingAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrackingAnalytics.debug.xcconfig"; path = "Target Support Files/Pods-EasyTrackingAnalytics/Pods-EasyTrackingAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
 		5EB0DEF563568FB9D1D16958 /* Pods-EasyTracking-EasyTrackingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTracking-EasyTrackingTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyTracking-EasyTrackingTests/Pods-EasyTracking-EasyTrackingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6258691240CB4A3CDF647181 /* Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8ED6C7B038373EB1A37DEF1A /* Pods-EasyTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTracking.release.xcconfig"; path = "Target Support Files/Pods-EasyTracking/Pods-EasyTracking.release.xcconfig"; sourceTree = "<group>"; };
 		AC1E9B0FD264394BD02AF5D5 /* Pods-EasyTracking-EasyTrackingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTracking-EasyTrackingTests.release.xcconfig"; path = "Target Support Files/Pods-EasyTracking-EasyTrackingTests/Pods-EasyTracking-EasyTrackingTests.release.xcconfig"; sourceTree = "<group>"; };
-		AE6AFEFDB7D0A477E53210E4 /* Pods_EasyTracking_EasyTrackingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTracking_EasyTrackingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A736D3695D2ED887BAC907 /* Pods-EasyTrackingAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrackingAnalytics.release.xcconfig"; path = "Target Support Files/Pods-EasyTrackingAnalytics/Pods-EasyTrackingAnalytics.release.xcconfig"; sourceTree = "<group>"; };
 		E9F177B6C04C21F023C7C03F /* Pods-EasyTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTracking.debug.xcconfig"; path = "Target Support Files/Pods-EasyTracking/Pods-EasyTracking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5392E7ABDD16E2436D727FA1 /* Pods_EasyTracking.framework in Frameworks */,
+				F4D62F3DDB233883A9B5DE9F /* Pods_EasyTrackingAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DFADA00247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework in Frameworks */,
-				FCFE24856F6B4576173C02D2 /* Pods_EasyTracking_EasyTrackingTests.framework in Frameworks */,
+				54F32147C437E60E051E3476 /* Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +108,8 @@
 		48117CC4AB07C4A486297DBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3AA090F77D65B09C72E23603 /* Pods_EasyTracking.framework */,
-				AE6AFEFDB7D0A477E53210E4 /* Pods_EasyTracking_EasyTrackingTests.framework */,
+				2A004CC9766B40C7CD7AEA3E /* Pods_EasyTrackingAnalytics.framework */,
+				143C46BA124BD433A57A29A9 /* Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,6 +121,10 @@
 				8ED6C7B038373EB1A37DEF1A /* Pods-EasyTracking.release.xcconfig */,
 				5EB0DEF563568FB9D1D16958 /* Pods-EasyTracking-EasyTrackingTests.debug.xcconfig */,
 				AC1E9B0FD264394BD02AF5D5 /* Pods-EasyTracking-EasyTrackingTests.release.xcconfig */,
+				4FCA58ECEA6B30D97E75B47D /* Pods-EasyTrackingAnalytics.debug.xcconfig */,
+				B8A736D3695D2ED887BAC907 /* Pods-EasyTrackingAnalytics.release.xcconfig */,
+				6258691240CB4A3CDF647181 /* Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.debug.xcconfig */,
+				256137E755C2BBD3B83729EB /* Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -236,15 +244,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTracking-EasyTrackingTests/Pods-EasyTracking-EasyTrackingTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTracking-EasyTrackingTests/Pods-EasyTracking-EasyTrackingTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyTracking-EasyTrackingTests/Pods-EasyTracking-EasyTrackingTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6DB507C30F33C7BB170594BB /* [CP] Check Pods Manifest.lock */ = {
@@ -262,7 +270,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EasyTracking-EasyTrackingTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -284,7 +292,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EasyTracking-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EasyTrackingAnalytics-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -443,7 +451,7 @@
 		};
 		1DFADA0B247A6AB60098BF88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9F177B6C04C21F023C7C03F /* Pods-EasyTracking.debug.xcconfig */;
+			baseConfigurationReference = 4FCA58ECEA6B30D97E75B47D /* Pods-EasyTrackingAnalytics.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
@@ -473,7 +481,7 @@
 		};
 		1DFADA0C247A6AB60098BF88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ED6C7B038373EB1A37DEF1A /* Pods-EasyTracking.release.xcconfig */;
+			baseConfigurationReference = B8A736D3695D2ED887BAC907 /* Pods-EasyTrackingAnalytics.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
@@ -502,7 +510,7 @@
 		};
 		1DFADA0E247A6AB60098BF88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EB0DEF563568FB9D1D16958 /* Pods-EasyTracking-EasyTrackingTests.debug.xcconfig */;
+			baseConfigurationReference = 6258691240CB4A3CDF647181 /* Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
@@ -524,7 +532,7 @@
 		};
 		1DFADA0F247A6AB60098BF88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC1E9B0FD264394BD02AF5D5 /* Pods-EasyTracking-EasyTrackingTests.release.xcconfig */;
+			baseConfigurationReference = 256137E755C2BBD3B83729EB /* Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;

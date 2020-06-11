@@ -6,7 +6,7 @@ source 'git@github.com:applicaster/CocoaPods-Private.git'
 source 'https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git'
 source 'https://cdn.cocoapods.org/'
 
-target 'EasyTracking' do
+target 'EasyTrackingAnalytics' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -15,7 +15,7 @@ target 'EasyTracking' do
   pod 'EasyTracking'
   pod 'EasyTracking/EchoTracker'
 
-  target 'EasyTrackingTests' do
+  target 'EasyTrackingAnalyticsTests' do
     # inherit! :search_paths
     # Pods for testing
   end

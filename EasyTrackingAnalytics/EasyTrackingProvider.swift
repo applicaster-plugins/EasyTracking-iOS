@@ -10,18 +10,27 @@ import ZappPlugins
 @objc public class EasyTrackingProvider: NSObject, ZPAnalyticsProviderProtocol {
    
     public var configurationJSON: NSDictionary?
+    private var shouldTrackEvent = false
     
     public required init(configurationJSON: NSDictionary?) {
+        super.init()
         self.configurationJSON = configurationJSON
+        setTrackPermission()
     }
     
-    public required override init() {
-        
-    }
+    public required override init() {}
     
+    public func setTrackPermission(){
+        let dic = UserDefaults.standard.dictionary(forKey: "CMPConsents")
+        if let canTrack = dic?["Google Analytics"] as? Bool{
+            shouldTrackEvent = canTrack
+        }
+    }
     
     public func trackEvent(_ eventName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
-        
+        if(eventName.elementsEqual("LifecycleCreate")){
+            print("play")
+        }
     }
     
     public func presentToastForLoggedEvent(_ eventDescription: String?) {

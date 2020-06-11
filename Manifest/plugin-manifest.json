@@ -14,11 +14,17 @@
   "author_email": "roei.carmel@msapps.mobi",
   "author_name": "Roei Carmel",
   "custom_configuration_fields": [
-
+    {
+        "type": "text",
+        "key": "client_identifier",
+        "label": "Client Identifier for EasyTracking init",
+        "placeholder": "Enter Client Identifier"
+    }
   ],
   "dependency_name": "EasyTracking",
   "dependency_repository_url": [
-    "git@github.com:applicaster-plugins/EasyTracking-iOS.git"
+    "git@github.com:applicaster-plugins/EasyTracking-iOS.git",
+    "https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git"
   ],
   "dependency_version": "0.1.0",
   "deprecated_since_zapp_sdk": "",
