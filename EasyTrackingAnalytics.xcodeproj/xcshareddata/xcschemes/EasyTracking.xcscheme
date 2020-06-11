@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1DFAD9F5247A6AB60098BF88"
-               BuildableName = "EasyTracking.framework"
-               BlueprintName = "EasyTracking"
-               ReferencedContainer = "container:EasyTracking.xcodeproj">
+               BuildableName = "EasyTrackingAnalytics.framework"
+               BlueprintName = "EasyTrackingAnalytics"
+               ReferencedContainer = "container:EasyTrackingAnalytics.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1DFAD9FE247A6AB60098BF88"
-               BuildableName = "EasyTrackingTests.xctest"
-               BlueprintName = "EasyTrackingTests"
-               ReferencedContainer = "container:EasyTracking.xcodeproj">
+               BuildableName = "EasyTrackingAnalyticsTests.xctest"
+               BlueprintName = "EasyTrackingAnalyticsTests"
+               ReferencedContainer = "container:EasyTrackingAnalytics.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1DFAD9F5247A6AB60098BF88"
-            BuildableName = "EasyTracking.framework"
-            BlueprintName = "EasyTracking"
-            ReferencedContainer = "container:EasyTracking.xcodeproj">
+            BuildableName = "EasyTrackingAnalytics.framework"
+            BlueprintName = "EasyTrackingAnalytics"
+            ReferencedContainer = "container:EasyTrackingAnalytics.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

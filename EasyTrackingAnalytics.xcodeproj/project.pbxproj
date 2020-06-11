@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07D8A6E6247CF9CE00B238C6 /* EasyTrackingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D8A6E5247CF9CE00B238C6 /* EasyTrackingProvider.swift */; };
-		1DFADA00247A6AB60098BF88 /* EasyTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFAD9F6247A6AB60098BF88 /* EasyTracking.framework */; };
+		1DFADA00247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFAD9F6247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework */; };
 		1DFADA05247A6AB60098BF88 /* EasyTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFADA04247A6AB60098BF88 /* EasyTrackingTests.swift */; };
 		1DFADA07247A6AB60098BF88 /* EasyTracking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFAD9F9247A6AB60098BF88 /* EasyTracking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5392E7ABDD16E2436D727FA1 /* Pods_EasyTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA090F77D65B09C72E23603 /* Pods_EasyTracking.framework */; };
@@ -27,10 +27,10 @@
 
 /* Begin PBXFileReference section */
 		07D8A6E5247CF9CE00B238C6 /* EasyTrackingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTrackingProvider.swift; sourceTree = "<group>"; };
-		1DFAD9F6247A6AB60098BF88 /* EasyTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DFAD9F6247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyTrackingAnalyticsAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFAD9F9247A6AB60098BF88 /* EasyTracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyTracking.h; sourceTree = "<group>"; };
 		1DFAD9FA247A6AB60098BF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DFAD9FF247A6AB60098BF88 /* EasyTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DFAD9FF247A6AB60098BF88 /* EasyTrackingAnalyticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyTrackingAnalyticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFADA04247A6AB60098BF88 /* EasyTrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTrackingTests.swift; sourceTree = "<group>"; };
 		1DFADA06247A6AB60098BF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AA090F77D65B09C72E23603 /* Pods_EasyTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DFADA00247A6AB60098BF88 /* EasyTracking.framework in Frameworks */,
+				1DFADA00247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework in Frameworks */,
 				FCFE24856F6B4576173C02D2 /* Pods_EasyTracking_EasyTrackingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,8 +65,8 @@
 		1DFAD9EC247A6AB60098BF88 = {
 			isa = PBXGroup;
 			children = (
-				1DFAD9F8247A6AB60098BF88 /* EasyTracking */,
-				1DFADA03247A6AB60098BF88 /* EasyTrackingTests */,
+				1DFAD9F8247A6AB60098BF88 /* EasyTrackingAnalytics */,
+				1DFADA03247A6AB60098BF88 /* EasyTrackingAnalyticsTests */,
 				1DFAD9F7247A6AB60098BF88 /* Products */,
 				FCF6710D0A288B68C89D4F17 /* Pods */,
 				48117CC4AB07C4A486297DBE /* Frameworks */,
@@ -76,29 +76,29 @@
 		1DFAD9F7247A6AB60098BF88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1DFAD9F6247A6AB60098BF88 /* EasyTracking.framework */,
-				1DFAD9FF247A6AB60098BF88 /* EasyTrackingTests.xctest */,
+				1DFAD9F6247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework */,
+				1DFAD9FF247A6AB60098BF88 /* EasyTrackingAnalyticsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1DFAD9F8247A6AB60098BF88 /* EasyTracking */ = {
+		1DFAD9F8247A6AB60098BF88 /* EasyTrackingAnalytics */ = {
 			isa = PBXGroup;
 			children = (
 				1DFAD9F9247A6AB60098BF88 /* EasyTracking.h */,
 				07D8A6E5247CF9CE00B238C6 /* EasyTrackingProvider.swift */,
 				1DFAD9FA247A6AB60098BF88 /* Info.plist */,
 			);
-			path = EasyTracking;
+			path = EasyTrackingAnalytics;
 			sourceTree = "<group>";
 		};
-		1DFADA03247A6AB60098BF88 /* EasyTrackingTests */ = {
+		1DFADA03247A6AB60098BF88 /* EasyTrackingAnalyticsTests */ = {
 			isa = PBXGroup;
 			children = (
 				1DFADA04247A6AB60098BF88 /* EasyTrackingTests.swift */,
 				1DFADA06247A6AB60098BF88 /* Info.plist */,
 			);
-			path = EasyTrackingTests;
+			path = EasyTrackingAnalyticsTests;
 			sourceTree = "<group>";
 		};
 		48117CC4AB07C4A486297DBE /* Frameworks */ = {
@@ -135,9 +135,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1DFAD9F5247A6AB60098BF88 /* EasyTracking */ = {
+		1DFAD9F5247A6AB60098BF88 /* EasyTrackingAnalytics */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DFADA0A247A6AB60098BF88 /* Build configuration list for PBXNativeTarget "EasyTracking" */;
+			buildConfigurationList = 1DFADA0A247A6AB60098BF88 /* Build configuration list for PBXNativeTarget "EasyTrackingAnalytics" */;
 			buildPhases = (
 				6F0F350961744426B5044367 /* [CP] Check Pods Manifest.lock */,
 				1DFAD9F1247A6AB60098BF88 /* Headers */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = EasyTracking;
+			name = EasyTrackingAnalytics;
 			productName = EasyTracking;
-			productReference = 1DFAD9F6247A6AB60098BF88 /* EasyTracking.framework */;
+			productReference = 1DFAD9F6247A6AB60098BF88 /* EasyTrackingAnalyticsAnalytics.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1DFAD9FE247A6AB60098BF88 /* EasyTrackingTests */ = {
+		1DFAD9FE247A6AB60098BF88 /* EasyTrackingAnalyticsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DFADA0D247A6AB60098BF88 /* Build configuration list for PBXNativeTarget "EasyTrackingTests" */;
+			buildConfigurationList = 1DFADA0D247A6AB60098BF88 /* Build configuration list for PBXNativeTarget "EasyTrackingAnalyticsTests" */;
 			buildPhases = (
 				6DB507C30F33C7BB170594BB /* [CP] Check Pods Manifest.lock */,
 				1DFAD9FB247A6AB60098BF88 /* Sources */,
@@ -169,9 +169,9 @@
 			dependencies = (
 				1DFADA02247A6AB60098BF88 /* PBXTargetDependency */,
 			);
-			name = EasyTrackingTests;
+			name = EasyTrackingAnalyticsTests;
 			productName = EasyTrackingTests;
-			productReference = 1DFAD9FF247A6AB60098BF88 /* EasyTrackingTests.xctest */;
+			productReference = 1DFAD9FF247A6AB60098BF88 /* EasyTrackingAnalyticsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -193,7 +193,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1DFAD9F0247A6AB60098BF88 /* Build configuration list for PBXProject "EasyTracking" */;
+			buildConfigurationList = 1DFAD9F0247A6AB60098BF88 /* Build configuration list for PBXProject "EasyTrackingAnalytics" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -206,8 +206,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1DFAD9F5247A6AB60098BF88 /* EasyTracking */,
-				1DFAD9FE247A6AB60098BF88 /* EasyTrackingTests */,
+				1DFAD9F5247A6AB60098BF88 /* EasyTrackingAnalytics */,
+				1DFAD9FE247A6AB60098BF88 /* EasyTrackingAnalyticsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,7 +315,7 @@
 /* Begin PBXTargetDependency section */
 		1DFADA02247A6AB60098BF88 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1DFAD9F5247A6AB60098BF88 /* EasyTracking */;
+			target = 1DFAD9F5247A6AB60098BF88 /* EasyTrackingAnalytics */;
 			targetProxy = 1DFADA01247A6AB60098BF88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -452,7 +452,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = EasyTracking/Info.plist;
+				INFOPLIST_FILE = EasyTrackingAnalytics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,8 +460,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTracking;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTrackingAnalytics;
+				PRODUCT_NAME = EasyTrackingAnalyticsAnalytics;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
@@ -482,7 +482,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = EasyTracking/Info.plist;
+				INFOPLIST_FILE = EasyTrackingAnalytics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,8 +490,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTracking;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTrackingAnalytics;
+				PRODUCT_NAME = EasyTrackingAnalyticsAnalytics;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
@@ -547,7 +547,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DFAD9F0247A6AB60098BF88 /* Build configuration list for PBXProject "EasyTracking" */ = {
+		1DFAD9F0247A6AB60098BF88 /* Build configuration list for PBXProject "EasyTrackingAnalytics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DFADA08247A6AB60098BF88 /* Debug */,
@@ -556,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DFADA0A247A6AB60098BF88 /* Build configuration list for PBXNativeTarget "EasyTracking" */ = {
+		1DFADA0A247A6AB60098BF88 /* Build configuration list for PBXNativeTarget "EasyTrackingAnalytics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DFADA0B247A6AB60098BF88 /* Debug */,
@@ -565,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DFADA0D247A6AB60098BF88 /* Build configuration list for PBXNativeTarget "EasyTrackingTests" */ = {
+		1DFADA0D247A6AB60098BF88 /* Build configuration list for PBXNativeTarget "EasyTrackingAnalyticsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DFADA0E247A6AB60098BF88 /* Debug */,

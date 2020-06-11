@@ -1,20 +1,35 @@
 PODS:
+  - EasyTracking (1.6.2):
+    - EasyTracking/Core (= 1.6.2)
+  - EasyTracking/Core (1.6.2):
+    - OasisJSBridge
+  - EasyTracking/EchoTracker (1.6.2):
+    - EasyTracking/Core
+  - OasisJSBridge (0.3.8)
   - ZappCore (0.9.16)
-  - ZappPlugins (11.6.7):
+  - ZappPlugins (11.7.1):
     - ZappCore
 
 DEPENDENCIES:
+  - EasyTracking
+  - EasyTracking/EchoTracker
   - ZappPlugins
 
 SPEC REPOS:
   "git@github.com:applicaster/CocoaPods.git":
     - ZappCore
     - ZappPlugins
+  "https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git":
+    - EasyTracking
+  https://cdn.cocoapods.org/:
+    - OasisJSBridge
 
 SPEC CHECKSUMS:
+  EasyTracking: 17372a76dd6e3458d576299bdcdab44e46072750
+  OasisJSBridge: 13b21eb8b6f98bedbf3d1a27bfa896d0f5f611bf
   ZappCore: 8d057418e422657f7521689b6a2844e31baede88
-  ZappPlugins: 2abfd1e32208a1ad5411b67edc8483e7b74e3aa3
+  ZappPlugins: acc9cbefdb0193b9eb80fca23ed0d02ddfce4573
 
-PODFILE CHECKSUM: bb21f300e47607f57f02e89ab1d289460c75719d
+PODFILE CHECKSUM: 666691c66403101dd1b14f5433f93da6fd1d71af
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

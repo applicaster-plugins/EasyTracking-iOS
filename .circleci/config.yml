@@ -11,7 +11,7 @@ jobs:
       xcode: "11.2.1"
     shell: /bin/bash --login -eo pipefail
     environment:
-      - PROJECT_NAME: "EasyTracking"
+      - PROJECT_NAME: "EasyTrackingAnalytics"
       - SCRIPTS_LOCAL_FOLDER: "~/.scripts-iOS"
       - SCRIPTS_REPO_PATH: "git@github.com:applicaster/Scripts-iOS.git"
       - DEPLOY_VERSION: "0.10.0"
