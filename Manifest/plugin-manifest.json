@@ -3,7 +3,7 @@
   "api": {
     "class_name": "EasyTrackingProvider",
     "modules": [
-      "EasyTracking"
+      "EasyTrackingAnalytics"
     ]
   },
   "assets": {
@@ -21,19 +21,19 @@
         "placeholder": "Enter Client Identifier"
     }
   ],
-  "dependency_name": "EasyTracking",
+  "dependency_name": "EasyTrackingAnalytics",
   "dependency_repository_url": [
     "git@github.com:applicaster-plugins/EasyTracking-iOS.git",
     "https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git"
   ],
-  "dependency_version": "0.1.0",
+  "dependency_version": "0.2.0",
   "deprecated_since_zapp_sdk": "",
   "description": "Main Analytics plugin for pro7 team",
   "extra_dependencies": [
 
   ],
   "identifier": "prosieben_easy_tracking",
-  "manifest_version": "0.1.0",
+  "manifest_version": "0.2.0",
   "min_zapp_sdk": "13.0.0-Dev",
   "name": "Easy Tracking",
   "npm_dependencies": [

@@ -6,21 +6,32 @@
 //
 import Foundation
 import ZappPlugins
+import EasyTracking
 
 @objc public class EasyTrackingProvider: NSObject, ZPAnalyticsProviderProtocol {
    
     public var configurationJSON: NSDictionary?
-    private var shouldTrackEvent = false
+    private var shouldTrackEvent = true
     
     public required init(configurationJSON: NSDictionary?) {
         super.init()
         self.configurationJSON = configurationJSON
-        setTrackPermission()
+        //Easy tracking init
+        if let id = configurationJSON?["client_identifier"] as? String{
+            EasyTracker.setup(with: id, trackers: [EchoTracker("googleAnalytics")], completion: { error in
+                if (error == nil){
+                    EasyTracker.debug = true
+                    if(self.shouldTrackEvent){
+                        EasyTracker.enable()
+                    }
+                }
+            })
+        }
     }
     
     public required override init() {}
     
-    public func setTrackPermission(){
+    public func getTrackPermission(){
         let dic = UserDefaults.standard.dictionary(forKey: "CMPConsents")
         if let canTrack = dic?["Google Analytics"] as? Bool{
             shouldTrackEvent = canTrack
@@ -28,9 +39,7 @@ import ZappPlugins
     }
     
     public func trackEvent(_ eventName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
-        if(eventName.elementsEqual("LifecycleCreate")){
-            print("play")
-        }
+        EasyTracker.trackEvent(name: eventName, payload: parameters)
     }
     
     public func presentToastForLoggedEvent(_ eventDescription: String?) {
@@ -78,7 +87,7 @@ import ZappPlugins
     }
     
     public func trackScreenView(_ screenName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
-        
+        EasyTracker.trackScreen(name: screenName, payload: parameters)
     }
   
 }

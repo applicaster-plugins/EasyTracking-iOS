@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
-  s.name             = "EasyTracking"
-  s.version          = '0.1.2'
-  s.summary          = "EasyTracking"
+  s.name             = "EasyTrackingAnalytics"
+  s.version          = '0.2.0'
+  s.summary          = "EasyTrackingAnalytics"
   s.description      = <<-DESC
-                        EasyTracking.
+                        EasyTrackingAnalytics.
                        DESC
-  s.homepage         = "https://github.com/applicaster-plugins/EasyTracking-iOS"
+  s.homepage         = "https://github.com/applicaster-plugins/EasyTrackingAnalytics-iOS"
   s.license          = 'CMPS'
   s.author           = "Applicaster LTD."
-  s.source           = { :git => "git@github.com:applicaster-plugins/EasyTracking-iOS.git", :tag => s.version.to_s }
+  s.source           = { :git => "git@github.com:applicaster-plugins/EasyTrackingAnalytics-iOS.git", :tag => s.version.to_s }
   s.platform         = :ios, '10.0'
   s.requires_arc = true
   s.static_framework = true
@@ -23,8 +23,6 @@ Pod::Spec.new do |s|
                 }
 
   s.dependency 'ApplicasterSDK'
-  s.dependency 'EasyTracking'
   s.dependency 'EasyTracking/EchoTracker'
-
 
 end
