@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "EasyTrackingAnalytics"
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = "EasyTrackingAnalytics"
   s.description      = <<-DESC
                         EasyTrackingAnalytics.
