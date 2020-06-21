@@ -25,5 +25,6 @@ Pod::Spec.new do |s|
               }
 
   # addtional dependencies
-
+  s.dependency 'EasyTracking/EchoTracker'
+  s.dependency 'EasyTracking/GoogleAnalytics'
 end
