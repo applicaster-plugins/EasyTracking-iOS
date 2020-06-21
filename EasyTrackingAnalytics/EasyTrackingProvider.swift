@@ -39,7 +39,11 @@ import EasyTracking
     }
     
     public func trackEvent(_ eventName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
-        EasyTracker.trackEvent(name: eventName, payload: parameters)
+        if let _ = parameters["isPlayerEvent"] as? Bool{
+            EasyTracker.trackMediaEvent(name: eventName, payload: parameters)
+        }else{
+            EasyTracker.trackEvent(name: eventName, payload: parameters)
+        }
     }
     
     public func presentToastForLoggedEvent(_ eventDescription: String?) {
