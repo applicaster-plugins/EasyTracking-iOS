@@ -6,14 +6,19 @@
  source 'https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git'
  source 'https://cdn.cocoapods.org/'
 
+ pre_install do |installer|
+ 	# workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+ 	Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+ end
+
 target 'EasyTrackingAnalytics' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for EasyTrackingAnalytics
  pod 'ApplicasterSDK'
- pod 'EasyTracking'
  pod 'EasyTracking/EchoTracker'
+ pod 'EasyTracking/GoogleAnalytics'
 
   target 'EasyTrackingAnalyticsTests' do
     # inherit! :search_paths

@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (4.9.1)
-  - ApplicasterSDK (12.3.3):
+  - ApplicasterSDK (12.4.0):
     - Alamofire (= 4.9.1)
     - CocoaLumberjack/Swift (= 3.5.3)
-    - FBSDKCoreKit (= 5.15.1)
-    - FBSDKLoginKit (= 5.15.1)
-    - FBSDKShareKit (= 5.15.1)
+    - FBSDKCoreKit (= 6.2.0)
+    - FBSDKLoginKit (= 6.2.0)
+    - FBSDKShareKit (= 6.2.0)
     - SSZipArchive (= 2.1.0)
     - TTTAttributedLabel (= 2.1.0)
     - TwitterKit (= 3.4.2)
@@ -13,26 +13,32 @@ PODS:
   - CocoaLumberjack/Core (3.5.3)
   - CocoaLumberjack/Swift (3.5.3):
     - CocoaLumberjack/Core
-  - EasyTracking (1.6.2):
-    - EasyTracking/Core (= 1.6.2)
-  - EasyTracking/Core (1.6.2):
+  - EasyTracking/Core (1.6.4):
     - OasisJSBridge
-  - EasyTracking/EchoTracker (1.6.2):
+  - EasyTracking/EchoTracker (1.6.4):
     - EasyTracking/Core
-  - FBSDKCoreKit (5.15.1):
-    - FBSDKCoreKit/Basics (= 5.15.1)
-    - FBSDKCoreKit/Core (= 5.15.1)
-  - FBSDKCoreKit/Basics (5.15.1)
-  - FBSDKCoreKit/Core (5.15.1):
+  - EasyTracking/GoogleAnalytics (1.6.4):
+    - EasyTracking/Core
+    - GoogleAnalyticsWrapper (= 3.17.0.4)
+  - FBSDKCoreKit (6.2.0):
+    - FBSDKCoreKit/Basics (= 6.2.0)
+    - FBSDKCoreKit/Core (= 6.2.0)
+  - FBSDKCoreKit/Basics (6.2.0)
+  - FBSDKCoreKit/Core (6.2.0):
     - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (5.15.1):
-    - FBSDKLoginKit/Login (= 5.15.1)
-  - FBSDKLoginKit/Login (5.15.1):
-    - FBSDKCoreKit (~> 5.0)
-  - FBSDKShareKit (5.15.1):
-    - FBSDKShareKit/Share (= 5.15.1)
-  - FBSDKShareKit/Share (5.15.1):
-    - FBSDKCoreKit (~> 5.0)
+  - FBSDKLoginKit (6.2.0):
+    - FBSDKLoginKit/Login (= 6.2.0)
+  - FBSDKLoginKit/Login (6.2.0):
+    - FBSDKCoreKit (~> 6.2.0)
+  - FBSDKShareKit (6.2.0):
+    - FBSDKShareKit/Share (= 6.2.0)
+  - FBSDKShareKit/Share (6.2.0):
+    - FBSDKCoreKit (~> 6.2.0)
+  - GoogleAnalytics (3.17.0)
+  - GoogleAnalyticsWrapper (3.17.0.4):
+    - GoogleAnalytics (~> 3.17.0)
+    - GoogleIDFASupport (~> 3.14.0)
+  - GoogleIDFASupport (3.14.0)
   - OasisJSBridge (0.3.8)
   - SSZipArchive (2.1.0)
   - TTTAttributedLabel (2.1.0)
@@ -45,8 +51,8 @@ PODS:
 
 DEPENDENCIES:
   - ApplicasterSDK
-  - EasyTracking
   - EasyTracking/EchoTracker
+  - EasyTracking/GoogleAnalytics
 
 SPEC REPOS:
   "git@github.com:applicaster/CocoaPods.git":
@@ -56,12 +62,15 @@ SPEC REPOS:
     - ZappPlugins
   "https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git":
     - EasyTracking
+    - GoogleAnalyticsWrapper
   https://cdn.cocoapods.org/:
     - Alamofire
     - CocoaLumberjack
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FBSDKShareKit
+    - GoogleAnalytics
+    - GoogleIDFASupport
     - OasisJSBridge
     - SSZipArchive
     - TwitterCore
@@ -69,12 +78,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  ApplicasterSDK: 47aa0e0ec70efd7f0fc3799fbe8ef41ba08f8a23
+  ApplicasterSDK: e17a28e33c9e70ba7ce6640fd5835b1ced8509b5
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
-  EasyTracking: 17372a76dd6e3458d576299bdcdab44e46072750
-  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
-  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
-  FBSDKShareKit: 259737eab3cc807087374553abdf588b3096ba55
+  EasyTracking: 3239e0a73872417e4962e2b4c554991c883ebc86
+  FBSDKCoreKit: a7bb9f5ac56c1e11d5f8ae0b90a3610f8744b43a
+  FBSDKLoginKit: 5877adb09cc249870c352d92ecc3246cb925c771
+  FBSDKShareKit: 09ad91955d3a6de171970f2954dc1e955b064899
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+  GoogleAnalyticsWrapper: 41349f9395b5830e43fc92656630698ac6fcda13
+  GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
   OasisJSBridge: 13b21eb8b6f98bedbf3d1a27bfa896d0f5f611bf
   SSZipArchive: 1e8e53dcb11bca3ded4738958dc49fc467320a14
   TTTAttributedLabel: f8c7f1dbc7b8f7168e23e8b4764dda2e3b74aae8
@@ -83,6 +95,6 @@ SPEC CHECKSUMS:
   ZappCore: 8d057418e422657f7521689b6a2844e31baede88
   ZappPlugins: 2abfd1e32208a1ad5411b67edc8483e7b74e3aa3
 
-PODFILE CHECKSUM: 3795ff281a32a8caa68e40951081c8bb867fa640
+PODFILE CHECKSUM: cf7d81d9f285c88dd3ba8e0edb87980e49d34433
 
 COCOAPODS: 1.7.5
