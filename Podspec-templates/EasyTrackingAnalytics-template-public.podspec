@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = '__framework_name__.framework'
 
   # base dependency
-  s.dependency 'ApplicasterSDK'
+  s.dependency 'ZappPlugins'
 
   # config
   s.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
               }
 
   # addtional dependencies
-  # s.dependency 'EasyTracking/EchoTracker'
-  # s.dependency 'EasyTracking/GoogleAnalytics'
+  s.dependency 'EasyTracking/EchoTracker'
+  s.dependency 'EasyTracking/GoogleAnalytics'
 
 end

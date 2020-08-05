@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
                     'ENABLE_BITCODE' => 'YES',
                     'SWIFT_VERSION' => '__swift_version__'
               }
-  s.dependency 'ApplicasterSDK'
+  s.dependency 'ZappPlugins'
   s.dependency 'EasyTracking/EchoTracker'
   s.dependency 'EasyTracking/GoogleAnalytics'
 

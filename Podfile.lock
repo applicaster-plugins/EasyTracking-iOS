@@ -1,100 +1,47 @@
 PODS:
-  - Alamofire (4.9.1)
-  - ApplicasterSDK (12.4.0):
-    - Alamofire (= 4.9.1)
-    - CocoaLumberjack/Swift (= 3.5.3)
-    - FBSDKCoreKit (= 6.2.0)
-    - FBSDKLoginKit (= 6.2.0)
-    - FBSDKShareKit (= 6.2.0)
-    - SSZipArchive (= 2.1.0)
-    - TTTAttributedLabel (= 2.1.0)
-    - TwitterKit (= 3.4.2)
-    - ZappPlugins (~> 11.6.6)
-  - CocoaLumberjack/Core (3.5.3)
-  - CocoaLumberjack/Swift (3.5.3):
-    - CocoaLumberjack/Core
-  - EasyTracking/Core (1.6.4):
+  - EasyTracking/Core (1.6.6):
     - OasisJSBridge
-  - EasyTracking/EchoTracker (1.6.4):
+  - EasyTracking/EchoTracker (1.6.6):
     - EasyTracking/Core
-  - EasyTracking/GoogleAnalytics (1.6.4):
+  - EasyTracking/GoogleAnalytics (1.6.6):
     - EasyTracking/Core
     - GoogleAnalyticsWrapper (= 3.17.0.4)
-  - FBSDKCoreKit (6.2.0):
-    - FBSDKCoreKit/Basics (= 6.2.0)
-    - FBSDKCoreKit/Core (= 6.2.0)
-  - FBSDKCoreKit/Basics (6.2.0)
-  - FBSDKCoreKit/Core (6.2.0):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (6.2.0):
-    - FBSDKLoginKit/Login (= 6.2.0)
-  - FBSDKLoginKit/Login (6.2.0):
-    - FBSDKCoreKit (~> 6.2.0)
-  - FBSDKShareKit (6.2.0):
-    - FBSDKShareKit/Share (= 6.2.0)
-  - FBSDKShareKit/Share (6.2.0):
-    - FBSDKCoreKit (~> 6.2.0)
   - GoogleAnalytics (3.17.0)
   - GoogleAnalyticsWrapper (3.17.0.4):
     - GoogleAnalytics (~> 3.17.0)
     - GoogleIDFASupport (~> 3.14.0)
   - GoogleIDFASupport (3.14.0)
-  - OasisJSBridge (0.3.8)
-  - SSZipArchive (2.1.0)
-  - TTTAttributedLabel (2.1.0)
-  - TwitterCore (3.2.0)
-  - TwitterKit (3.4.2):
-    - TwitterCore (>= 3.2.0)
-  - ZappCore (0.9.16)
-  - ZappPlugins (11.6.7):
+  - OasisJSBridge (0.3.10)
+  - ZappCore (0.9.18)
+  - ZappPlugins (11.8.0):
     - ZappCore
 
 DEPENDENCIES:
-  - ApplicasterSDK
   - EasyTracking/EchoTracker
   - EasyTracking/GoogleAnalytics
+  - ZappPlugins
 
 SPEC REPOS:
   "git@github.com:applicaster/CocoaPods.git":
-    - ApplicasterSDK
-    - TTTAttributedLabel
     - ZappCore
     - ZappPlugins
   "https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git":
     - EasyTracking
     - GoogleAnalyticsWrapper
-  https://cdn.cocoapods.org/:
-    - Alamofire
-    - CocoaLumberjack
-    - FBSDKCoreKit
-    - FBSDKLoginKit
-    - FBSDKShareKit
+  trunk:
     - GoogleAnalytics
     - GoogleIDFASupport
     - OasisJSBridge
-    - SSZipArchive
-    - TwitterCore
-    - TwitterKit
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  ApplicasterSDK: e17a28e33c9e70ba7ce6640fd5835b1ced8509b5
-  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
-  EasyTracking: 3239e0a73872417e4962e2b4c554991c883ebc86
-  FBSDKCoreKit: a7bb9f5ac56c1e11d5f8ae0b90a3610f8744b43a
-  FBSDKLoginKit: 5877adb09cc249870c352d92ecc3246cb925c771
-  FBSDKShareKit: 09ad91955d3a6de171970f2954dc1e955b064899
+  EasyTracking: 3f091cfde40d47e229e39f6cb101ad60e73a6263
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAnalyticsWrapper: 41349f9395b5830e43fc92656630698ac6fcda13
   GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
-  OasisJSBridge: 13b21eb8b6f98bedbf3d1a27bfa896d0f5f611bf
-  SSZipArchive: 1e8e53dcb11bca3ded4738958dc49fc467320a14
-  TTTAttributedLabel: f8c7f1dbc7b8f7168e23e8b4764dda2e3b74aae8
-  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
-  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
-  ZappCore: 8d057418e422657f7521689b6a2844e31baede88
-  ZappPlugins: 2abfd1e32208a1ad5411b67edc8483e7b74e3aa3
+  OasisJSBridge: 29c14ce77b2ae8ab92716b57b58f6b567ee89768
+  ZappCore: cc45ec2514e5cf879593a58e60b1815a7abe0048
+  ZappPlugins: c989f6ebf539f0071032d064e225349f420950e5
 
-PODFILE CHECKSUM: cf7d81d9f285c88dd3ba8e0edb87980e49d34433
+PODFILE CHECKSUM: ba14a41871341ecc5b663f6c5d79300fcae75fb3
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.3

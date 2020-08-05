@@ -16,7 +16,7 @@ target 'EasyTrackingAnalytics' do
   use_frameworks!
 
   # Pods for EasyTrackingAnalytics
- pod 'ApplicasterSDK'
+ pod 'ZappPlugins'
  pod 'EasyTracking/EchoTracker'
  pod 'EasyTracking/GoogleAnalytics'
 

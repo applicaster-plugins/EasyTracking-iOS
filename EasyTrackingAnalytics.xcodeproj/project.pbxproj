@@ -146,7 +146,6 @@
 				1DEFB57324923AED0091A3C4 /* Sources */,
 				1DEFB57424923AED0091A3C4 /* Frameworks */,
 				1DEFB57524923AED0091A3C4 /* Resources */,
-				01925E031CA7888B96EC8A1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,7 +165,6 @@
 				1DEFB57D24923AED0091A3C4 /* Frameworks */,
 				1DEFB57E24923AED0091A3C4 /* Resources */,
 				C8931C9859DCF5B991CA49A0 /* [CP] Embed Pods Frameworks */,
-				B939CBDA17D4E228CBE89294 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,23 +232,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01925E031CA7888B96EC8A1E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTrackingAnalytics/Pods-EasyTrackingAnalytics-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTrackingAnalytics/Pods-EasyTrackingAnalytics-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyTrackingAnalytics/Pods-EasyTrackingAnalytics-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		90A3746EFF32629C7F960713 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,23 +274,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B939CBDA17D4E228CBE89294 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests/Pods-EasyTrackingAnalytics-EasyTrackingAnalyticsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8931C9859DCF5B991CA49A0 /* [CP] Embed Pods Frameworks */ = {
@@ -501,6 +465,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleIDFASupport/Libraries",
 				);
+				MARKETING_VERSION = 0.2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTrackingAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -532,6 +497,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleIDFASupport/Libraries",
 				);
+				MARKETING_VERSION = 0.2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTrackingAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
