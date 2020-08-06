@@ -39,12 +39,10 @@ import EasyTracking
     }
     
     public func trackEvent(_ eventName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
-        if let _ = parameters["isPlayerEvent"] as? Bool {
-            var params = parameters
-            params.removeValue(forKey: "isPlayerEvent")
-            
-            EasyTracker.trackMediaEvent(name: eventName, payload: params)
-        }else{
+        if let isPlayerEvent = parameters["isPlayerEvent"] as? Bool, isPlayerEvent == true,
+            let payload = parameters["payload"] as? String {
+            EasyTracker.trackMediaEvent(name: eventName, payload: payload)
+        } else {
             EasyTracker.trackEvent(name: eventName, payload: parameters)
         }
     }

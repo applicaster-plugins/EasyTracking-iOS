@@ -465,7 +465,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleIDFASupport/Libraries",
 				);
-				MARKETING_VERSION = 0.2.7;
+				MARKETING_VERSION = 0.2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTrackingAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -497,7 +497,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleIDFASupport/Libraries",
 				);
-				MARKETING_VERSION = 0.2.7;
+				MARKETING_VERSION = 0.2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTrackingAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
