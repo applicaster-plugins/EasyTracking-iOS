@@ -14,7 +14,7 @@ jobs:
       - PROJECT_NAME: "EasyTrackingAnalytics"
       - SCRIPTS_LOCAL_FOLDER: "~/.scripts-iOS"
       - SCRIPTS_REPO_PATH: "git@github.com:applicaster/Scripts-iOS.git"
-      - DEPLOY_VERSION: "0.10.0"
+      - DEPLOY_VERSION: "0.17.4"
       - DEPLOY_COMMAND: "~/.scripts-iOS/circleCi/deploySingleXCFramework.sh"
     working_directory: ~/EasyTracking-iOS
 
