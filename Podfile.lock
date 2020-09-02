@@ -6,11 +6,21 @@ PODS:
   - EasyTracking/GoogleAnalytics (1.6.6):
     - EasyTracking/Core
     - GoogleAnalyticsWrapper (= 3.17.0.4)
+  - EasyTracking/INFOnline (1.6.6):
+    - EasyTracking/Core
+  - EasyTracking/Mixpanel (1.6.6):
+    - EasyTracking/Core
+    - Mixpanel-swift (= 2.7.5)
+  - EasyTracking/Nielsen (1.6.6):
+    - EasyTracking/Core
   - GoogleAnalytics (3.17.0)
   - GoogleAnalyticsWrapper (3.17.0.4):
     - GoogleAnalytics (~> 3.17.0)
     - GoogleIDFASupport (~> 3.14.0)
   - GoogleIDFASupport (3.14.0)
+  - Mixpanel-swift (2.7.5):
+    - Mixpanel-swift/Complete (= 2.7.5)
+  - Mixpanel-swift/Complete (2.7.5)
   - OasisJSBridge (0.3.10)
   - ZappCore (0.9.18)
   - ZappPlugins (11.8.0):
@@ -19,6 +29,9 @@ PODS:
 DEPENDENCIES:
   - EasyTracking/EchoTracker
   - EasyTracking/GoogleAnalytics
+  - EasyTracking/INFOnline
+  - EasyTracking/Mixpanel
+  - EasyTracking/Nielsen
   - ZappPlugins
 
 SPEC REPOS:
@@ -31,6 +44,7 @@ SPEC REPOS:
   trunk:
     - GoogleAnalytics
     - GoogleIDFASupport
+    - Mixpanel-swift
     - OasisJSBridge
 
 SPEC CHECKSUMS:
@@ -38,10 +52,11 @@ SPEC CHECKSUMS:
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAnalyticsWrapper: 41349f9395b5830e43fc92656630698ac6fcda13
   GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
+  Mixpanel-swift: 8a9449f08319f456ca501d86e0c6cfd33a546c86
   OasisJSBridge: 29c14ce77b2ae8ab92716b57b58f6b567ee89768
   ZappCore: cc45ec2514e5cf879593a58e60b1815a7abe0048
   ZappPlugins: c989f6ebf539f0071032d064e225349f420950e5
 
-PODFILE CHECKSUM: ba14a41871341ecc5b663f6c5d79300fcae75fb3
+PODFILE CHECKSUM: 58a2d284139d00f37130677e75acd71d65cca3d5
 
 COCOAPODS: 1.9.3

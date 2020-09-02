@@ -19,6 +19,9 @@ target 'EasyTrackingAnalytics' do
  pod 'ZappPlugins'
  pod 'EasyTracking/EchoTracker'
  pod 'EasyTracking/GoogleAnalytics'
+ pod 'EasyTracking/INFOnline'
+ pod 'EasyTracking/Nielsen'
+ pod 'EasyTracking/Mixpanel'
 
   target 'EasyTrackingAnalyticsTests' do
     # inherit! :search_paths

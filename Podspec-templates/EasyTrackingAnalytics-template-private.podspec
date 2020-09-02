@@ -10,15 +10,20 @@ Pod::Spec.new do |s|
   s.source  = { :git => "git@github.com:applicaster-plugins/__framework_name__-iOS.git", :tag => s.version.to_s }
   s.requires_arc = true
   s.static_framework = true
+  s.vendored_frameworks = '__framework_name__.xcframework'
 
   s.source_files = '__framework_name__/**/*.{h,m,swift}'
-  s.exclude_files = '__framework_name__/ZappAnalyticsPluginChartbeat.h'
+  s.exclude_files = '__framework_name__/EasyTrackingAnalytics.h'
   s.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                     'ENABLE_BITCODE' => 'YES',
                     'SWIFT_VERSION' => '__swift_version__'
               }
+              
   s.dependency 'ZappPlugins'
   s.dependency 'EasyTracking/EchoTracker'
   s.dependency 'EasyTracking/GoogleAnalytics'
+  s.dependency 'EasyTracking/INFOnline'
+  s.dependency 'EasyTracking/Nielsen'
+  s.dependency 'EasyTracking/Mixpanel'
 
 end

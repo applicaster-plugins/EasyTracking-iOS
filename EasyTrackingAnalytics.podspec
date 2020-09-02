@@ -25,5 +25,8 @@ Pod::Spec.new do |s|
   s.dependency 'ApplicasterSDK'
   s.dependency 'EasyTracking/EchoTracker'
   s.dependency 'EasyTracking/GoogleAnalytics'
+  s.dependency 'EasyTracking/INFOnline'
+  s.dependency 'EasyTracking/Nielsen'
+  s.dependency 'EasyTracking/Mixpanel'
 
 end

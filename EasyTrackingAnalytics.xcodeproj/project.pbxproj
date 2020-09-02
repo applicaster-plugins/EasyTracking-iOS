@@ -12,6 +12,9 @@
 		1DEFB58824923AED0091A3C4 /* EasyTrackingAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DEFB57A24923AED0091A3C4 /* EasyTrackingAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DEFB59224923CD50091A3C4 /* EasyTrackingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEFB59124923CD50091A3C4 /* EasyTrackingProvider.swift */; };
 		47A178F07637C67251AFD939 /* Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A00699B78D704C1E0F3F7F /* Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework */; };
+		C56302AE24FFA5BC003B8AF5 /* Podspec-templates in Resources */ = {isa = PBXBuildFile; fileRef = C56302AB24FFA5BC003B8AF5 /* Podspec-templates */; };
+		C56302AF24FFA5BC003B8AF5 /* plugin-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = C56302AC24FFA5BC003B8AF5 /* plugin-manifest.json */; };
+		C56302B024FFA5BC003B8AF5 /* EasyTrackingAnalytics.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C56302AD24FFA5BC003B8AF5 /* EasyTrackingAnalytics.podspec */; };
 		DEDCC9628010945670DCBA88 /* Pods_EasyTrackingAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0B584F19858277A43C2168 /* Pods_EasyTrackingAnalytics.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		82A00699B78D704C1E0F3F7F /* Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTrackingAnalytics_EasyTrackingAnalyticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE493D6B98234BBF9CF05C97 /* Pods-EasyTrackingAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrackingAnalytics.debug.xcconfig"; path = "Target Support Files/Pods-EasyTrackingAnalytics/Pods-EasyTrackingAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
 		B6A4DD670BCB982FAB334D91 /* Pods-EasyTrackingAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrackingAnalytics.release.xcconfig"; path = "Target Support Files/Pods-EasyTrackingAnalytics/Pods-EasyTrackingAnalytics.release.xcconfig"; sourceTree = "<group>"; };
+		C56302AB24FFA5BC003B8AF5 /* Podspec-templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Podspec-templates"; sourceTree = "<group>"; };
+		C56302AC24FFA5BC003B8AF5 /* plugin-manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "plugin-manifest.json"; path = "Manifest/plugin-manifest.json"; sourceTree = "<group>"; };
+		C56302AD24FFA5BC003B8AF5 /* EasyTrackingAnalytics.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EasyTrackingAnalytics.podspec; sourceTree = "<group>"; };
 		DB0B584F19858277A43C2168 /* Pods_EasyTrackingAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTrackingAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +72,9 @@
 		1DEFB56D24923AED0091A3C4 = {
 			isa = PBXGroup;
 			children = (
+				C56302AD24FFA5BC003B8AF5 /* EasyTrackingAnalytics.podspec */,
+				C56302AC24FFA5BC003B8AF5 /* plugin-manifest.json */,
+				C56302AB24FFA5BC003B8AF5 /* Podspec-templates */,
 				1DEFB57924923AED0091A3C4 /* EasyTrackingAnalytics */,
 				1DEFB58424923AED0091A3C4 /* EasyTrackingAnalyticsTests */,
 				1DEFB57824923AED0091A3C4 /* Products */,
@@ -219,6 +228,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56302B024FFA5BC003B8AF5 /* EasyTrackingAnalytics.podspec in Resources */,
+				C56302AE24FFA5BC003B8AF5 /* Podspec-templates in Resources */,
+				C56302AF24FFA5BC003B8AF5 /* plugin-manifest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +477,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleIDFASupport/Libraries",
 				);
-				MARKETING_VERSION = 0.2.8;
+				MARKETING_VERSION = 0.2.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTrackingAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -497,7 +509,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleIDFASupport/Libraries",
 				);
-				MARKETING_VERSION = 0.2.8;
+				MARKETING_VERSION = 0.2.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applicaster.EasyTrackingAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

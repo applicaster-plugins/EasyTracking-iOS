@@ -13,19 +13,19 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.static_framework = true
-  s.vendored_frameworks = '__framework_name__.framework'
-
-  # base dependency
-  s.dependency 'ZappPlugins'
-
-  # config
+  s.vendored_frameworks = '__framework_name__.xcframework'
+  s.exclude_files = '__framework_name__/EasyTrackingAnalytics.h'
+  
   s.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
                   'ENABLE_BITCODE' => 'YES',
                   'SWIFT_VERSION' => '__swift_version__'
               }
 
-  # addtional dependencies
-  # s.dependency 'EasyTracking/EchoTracker'
-  # s.dependency 'EasyTracking/GoogleAnalytics'
+  s.dependency 'ZappPlugins'
+  s.dependency 'EasyTracking/EchoTracker'
+  s.dependency 'EasyTracking/GoogleAnalytics'
+  s.dependency 'EasyTracking/INFOnline'
+  s.dependency 'EasyTracking/Nielsen'
+  s.dependency 'EasyTracking/Mixpanel'
 
 end
