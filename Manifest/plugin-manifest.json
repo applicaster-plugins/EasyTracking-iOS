@@ -26,7 +26,7 @@
     "git@github.com:applicaster-plugins/EasyTracking-iOS.git",
     "https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git"
   ],
-  "dependency_version": "0.3.1",
+  "dependency_version": "0.3.2",
   "deprecated_since_zapp_sdk": "",
   "description": "Main Analytics plugin for pro7 team",
   "extra_dependencies": [
