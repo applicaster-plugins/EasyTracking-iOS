@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source  = { :git => "git@github.com:applicaster-plugins/__framework_name__-iOS.git", :tag => s.version.to_s }
   s.requires_arc = true
   s.static_framework = true
-  s.vendored_frameworks = '__framework_name__.xcframework'
+  s.vendored_frameworks = '__framework_name__.framework'
 
   s.source_files = '__framework_name__/**/*.{h,m,swift}'
   s.exclude_files = '__framework_name__/EasyTrackingAnalytics.h'

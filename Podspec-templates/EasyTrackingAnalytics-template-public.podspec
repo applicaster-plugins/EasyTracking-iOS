@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.static_framework = true
-  s.vendored_frameworks = '__framework_name__.xcframework'
+  s.vendored_frameworks = '__framework_name__.framework'
   s.exclude_files = '__framework_name__/EasyTrackingAnalytics.h'
   
   s.xcconfig =  { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
