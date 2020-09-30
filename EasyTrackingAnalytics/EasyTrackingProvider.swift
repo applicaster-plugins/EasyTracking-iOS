@@ -27,9 +27,20 @@ import EasyTracking
                 }
             })
         }
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(trackScreenEventNotification(_:)),
+                                               name: Notification.Name("logScreenEvent"),
+                                               object: nil)
     }
     
     public required override init() {}
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: Notification.Name("logScreenEvent"),
+                                                  object: nil)
+    }
     
     public func getTrackPermission(){
         let dic = UserDefaults.standard.dictionary(forKey: "CMPConsents")
@@ -93,6 +104,15 @@ import EasyTracking
     
     public func trackScreenView(_ screenName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
         EasyTracker.trackScreen(name: screenName, payload: parameters)
+    }
+    
+    @objc private func trackScreenEventNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo as? [String: Any],
+           let eventName = userInfo["eventName"] as? String,
+           let isScreenView = userInfo["screenView"] as? Bool,
+           isScreenView == true {
+            trackScreenView(eventName, parameters: [:], completion: nil)
+        }
     }
   
 }
