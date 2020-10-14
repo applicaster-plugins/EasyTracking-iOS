@@ -25,6 +25,5 @@ Pod::Spec.new do |s|
   s.dependency 'EasyTracking/INFOnline'
   # s.dependency 'EasyTracking/Nielsen'
   s.dependency 'EasyTracking/Mixpanel'
-  s.dependency 'OasisJSBridge', '=0.3.8'
 
 end
