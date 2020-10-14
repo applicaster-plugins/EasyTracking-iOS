@@ -22,6 +22,7 @@ target 'EasyTrackingAnalytics' do
  pod 'EasyTracking/INFOnline'
  pod 'EasyTracking/Nielsen'
  pod 'EasyTracking/Mixpanel'
+ pod 'OasisJSBridge', '=0.3.8'
 
   target 'EasyTrackingAnalyticsTests' do
     # inherit! :search_paths

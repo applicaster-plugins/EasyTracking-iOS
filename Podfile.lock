@@ -21,7 +21,7 @@ PODS:
   - Mixpanel-swift (2.7.5):
     - Mixpanel-swift/Complete (= 2.7.5)
   - Mixpanel-swift/Complete (2.7.5)
-  - OasisJSBridge (0.3.12)
+  - OasisJSBridge (0.3.8)
   - ZappCore (0.9.18)
   - ZappPlugins (11.8.0):
     - ZappCore
@@ -32,6 +32,7 @@ DEPENDENCIES:
   - EasyTracking/INFOnline
   - EasyTracking/Mixpanel
   - EasyTracking/Nielsen
+  - OasisJSBridge (= 0.3.8)
   - ZappPlugins
 
 SPEC REPOS:
@@ -53,10 +54,10 @@ SPEC CHECKSUMS:
   GoogleAnalyticsWrapper: 41349f9395b5830e43fc92656630698ac6fcda13
   GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
   Mixpanel-swift: 8a9449f08319f456ca501d86e0c6cfd33a546c86
-  OasisJSBridge: 0440bbf57c78ed0d10acc4ba57c227ca6f9a9561
+  OasisJSBridge: 13b21eb8b6f98bedbf3d1a27bfa896d0f5f611bf
   ZappCore: cc45ec2514e5cf879593a58e60b1815a7abe0048
   ZappPlugins: c989f6ebf539f0071032d064e225349f420950e5
 
-PODFILE CHECKSUM: 58a2d284139d00f37130677e75acd71d65cca3d5
+PODFILE CHECKSUM: eaf34095cbc2404e7b8d71b9eeb919a9edadd2f8
 
 COCOAPODS: 1.9.3

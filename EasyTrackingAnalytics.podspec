@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "EasyTrackingAnalytics"
-  s.version          = '0.5.1'
+  s.version          = '0.5.2'
   s.summary          = "EasyTrackingAnalytics"
   s.description      = <<-DESC
                         EasyTrackingAnalytics.
@@ -22,11 +22,12 @@ Pod::Spec.new do |s|
                   'SWIFT_VERSION' => '5.1'
                 }
 
-  s.dependency 'ApplicasterSDK'
+  s.dependency 'ZappPlugins'
   s.dependency 'EasyTracking/EchoTracker'
   s.dependency 'EasyTracking/GoogleAnalytics'
   s.dependency 'EasyTracking/INFOnline'
   # s.dependency 'EasyTracking/Nielsen'
   s.dependency 'EasyTracking/Mixpanel'
+  s.dependency 'OasisJSBridge', '=0.3.8'
 
 end

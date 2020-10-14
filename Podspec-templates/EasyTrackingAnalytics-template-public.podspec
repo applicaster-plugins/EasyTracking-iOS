@@ -21,11 +21,12 @@ Pod::Spec.new do |s|
                   'SWIFT_VERSION' => '__swift_version__'
               }
 
-  s.dependency 'ZappPlugins'
-  # s.dependency 'EasyTracking/EchoTracker'
-  # s.dependency 'EasyTracking/GoogleAnalytics'
+  s.dependency 'ApplicasterSDK'
+  s.dependency 'EasyTracking/EchoTracker'
+  s.dependency 'EasyTracking/GoogleAnalytics'
   s.dependency 'EasyTracking/INFOnline'
   # s.dependency 'EasyTracking/Nielsen'
   s.dependency 'EasyTracking/Mixpanel'
+  s.dependency 'OasisJSBridge', '=0.3.8'
 
 end
