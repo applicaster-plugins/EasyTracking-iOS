@@ -57,24 +57,22 @@ import EasyTracking
     }
     
     public func trackEvent(_ eventName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            var modifiedParameters: [String: Any] = parameters
-            
-            //If necessary add IVW code
-            modifiedParameters = self.addIVWCode(event: eventName,
-                                                 parameters: parameters,
-                                                 eventType: .Action)
-            
-            if let isPlayerEvent = parameters["isPlayerEvent"] as? Bool,
-               isPlayerEvent == true,
-               let payload = modifiedParameters["payload"] as? String {
-                EasyTracker.trackMediaEvent(name: eventName, payload: payload)
-            } else {
-                EasyTracker.trackEvent(name: eventName, payload: modifiedParameters)
-            }
-            
-            completion?(true, nil)
+        var modifiedParameters: [String: Any] = parameters
+        
+        //If necessary add IVW code
+        modifiedParameters = self.addIVWCode(event: eventName,
+                                             parameters: parameters,
+                                             eventType: .Action)
+        
+        if let isPlayerEvent = parameters["isPlayerEvent"] as? Bool,
+           isPlayerEvent == true,
+           let payload = modifiedParameters["payload"] as? String {
+            EasyTracker.trackMediaEvent(name: eventName, payload: payload)
+        } else {
+            EasyTracker.trackEvent(name: eventName, payload: modifiedParameters)
         }
+        
+        completion?(true, nil)
     }
     
     public func presentToastForLoggedEvent(_ eventDescription: String?) {
@@ -122,22 +120,20 @@ import EasyTracking
     }
     
     public func trackScreenView(_ screenName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            
-            var modifiedParameters: [String: Any] = parameters
-            
-            //If necessary add IVW code
-            modifiedParameters = self.addIVWCode(event: screenName,
-                                                 parameters: parameters,
-                                                 eventType: .Screen)
-            
-            EasyTracker.trackScreen(name: screenName, payload: modifiedParameters)
-            
-            //Update screen name
-            self.lastScreenEvent = screenName
-            
-            completion?(true, nil)
-        }
+        
+        var modifiedParameters: [String: Any] = parameters
+        
+        //If necessary add IVW code
+        modifiedParameters = self.addIVWCode(event: screenName,
+                                             parameters: parameters,
+                                             eventType: .Screen)
+        
+        EasyTracker.trackScreen(name: screenName, payload: modifiedParameters)
+        
+        //Update screen name
+        self.lastScreenEvent = screenName
+        
+        completion?(true, nil)
     }
     
     @objc private func trackScreenEventNotification(_ notification: Notification) {
@@ -184,12 +180,13 @@ import EasyTracking
                 return modifiedParameters
             }
             
-            //Only add on match
-            if isNotMatchTrackOnceRule(event: ivwEvent, eventType: eventType)
-                || isMatchFromEventRule(event: ivwEvent, eventType: eventType) {
+            //Screen
+            if isNotMatchTrackOnceRule(currentEventName: event, ivwEvent: ivwEvent, eventType: eventType) //Screen
+                || isMatchFromEventRule(event: ivwEvent, eventType: eventType) {//Action {
                 //Add IVW code
                 modifiedParameters[IVW_CODE] = ivwEvent.code
             }
+            
             
             return modifiedParameters
             
@@ -208,22 +205,20 @@ import EasyTracking
         let eventLowerCase = event.lowercased()
         let regExLowerCase = regEx.lowercased()
         
-        let range = NSRange(location: 0, length: eventLowerCase.utf8.count)
-        let regex = try? NSRegularExpression(pattern: regExLowerCase)
-        
-        return regex?.firstMatch(in: eventLowerCase, options: [], range: range) != nil
+        return eventLowerCase.range(of: regExLowerCase.lowercased(),
+                                    options: .regularExpression) != nil
     }
     
-    private func isNotMatchTrackOnceRule(event: IVWEvent, eventType: EventType) -> Bool {
-        if eventType != .Screen && isScreenEvent(event: event){
+    private func isNotMatchTrackOnceRule(currentEventName:String, ivwEvent: IVWEvent, eventType: EventType) -> Bool {
+        if eventType != .Screen && isScreenEvent(event: ivwEvent){
             return false
         }
         
-        return ((event.trackOnce == nil)
-                    || event.trackOnce == false
-                    || (event.trackOnce == true &&
+        return ((ivwEvent.trackOnce == nil)
+                    || ivwEvent.trackOnce == false
+                    || (ivwEvent.trackOnce == true &&
                             self.lastScreenEvent != nil &&
-                            isRegExMatch(event: self.lastScreenEvent!, regEx: event.event)))
+                            currentEventName != self.lastScreenEvent))
     }
     
     //For actions only
