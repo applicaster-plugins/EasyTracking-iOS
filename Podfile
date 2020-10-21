@@ -22,6 +22,7 @@ target 'EasyTrackingAnalytics' do
  pod 'EasyTracking/INFOnline'
  pod 'EasyTracking/Nielsen'
  pod 'EasyTracking/Mixpanel'
+ pod 'EasyTracking/Nurago'
 
   target 'EasyTrackingAnalyticsTests' do
     # inherit! :search_paths
