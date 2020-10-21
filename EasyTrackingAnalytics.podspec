@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "EasyTrackingAnalytics"
-  s.version          = '0.5.0'
+  s.version          = '0.5.3'
   s.summary          = "EasyTrackingAnalytics"
   s.description      = <<-DESC
                         EasyTrackingAnalytics.
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
                   'SWIFT_VERSION' => '5.1'
                 }
 
-  s.dependency 'ApplicasterSDK'
+  s.dependency 'ZappPlugins'
   s.dependency 'EasyTracking/EchoTracker'
   s.dependency 'EasyTracking/GoogleAnalytics'
   s.dependency 'EasyTracking/INFOnline'
