@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "EasyTrackingAnalytics"
-  s.version          = '0.5.3'
+  s.version          = '0.5.4'
   s.summary          = "EasyTrackingAnalytics"
   s.description      = <<-DESC
                         EasyTrackingAnalytics.
@@ -28,5 +28,6 @@ Pod::Spec.new do |s|
   s.dependency 'EasyTracking/INFOnline'
   # s.dependency 'EasyTracking/Nielsen'
   s.dependency 'EasyTracking/Mixpanel'
+  s.dependency 'EasyTracking/Nurago'
 
 end

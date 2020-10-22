@@ -13,6 +13,10 @@ PODS:
     - Mixpanel-swift (= 2.7.5)
   - EasyTracking/Nielsen (1.6.7):
     - EasyTracking/Core
+  - EasyTracking/Nurago (1.6.7):
+    - EasyTracking/Core
+    - S2S-SDK (= 1.11.5)
+    - S2S-SDK-TVOS (= 1.11.5)
   - GoogleAnalytics (3.17.0)
   - GoogleAnalyticsWrapper (3.17.0.4):
     - GoogleAnalytics (~> 3.17.0)
@@ -22,6 +26,7 @@ PODS:
     - Mixpanel-swift/Complete (= 2.7.5)
   - Mixpanel-swift/Complete (2.7.5)
   - OasisJSBridge (0.3.8)
+  - S2S-SDK (1.11.5)
   - ZappCore (0.9.18)
   - ZappPlugins (11.8.0):
     - ZappCore
@@ -32,6 +37,7 @@ DEPENDENCIES:
   - EasyTracking/INFOnline
   - EasyTracking/Mixpanel
   - EasyTracking/Nielsen
+  - EasyTracking/Nurago
   - OasisJSBridge (= 0.3.8)
   - ZappPlugins
 
@@ -42,11 +48,12 @@ SPEC REPOS:
   "https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git":
     - EasyTracking
     - GoogleAnalyticsWrapper
-  https://cdn.cocoapods.org/:
+  trunk:
     - GoogleAnalytics
     - GoogleIDFASupport
     - Mixpanel-swift
     - OasisJSBridge
+    - S2S-SDK
 
 SPEC CHECKSUMS:
   EasyTracking: 8bf1b9fb971ea569803bafa33d98e3312519f31b
@@ -55,9 +62,10 @@ SPEC CHECKSUMS:
   GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
   Mixpanel-swift: 8a9449f08319f456ca501d86e0c6cfd33a546c86
   OasisJSBridge: 13b21eb8b6f98bedbf3d1a27bfa896d0f5f611bf
+  S2S-SDK: ada3b92142b83a37c29c1335bfe5056d3ded45d2
   ZappCore: cc45ec2514e5cf879593a58e60b1815a7abe0048
   ZappPlugins: c989f6ebf539f0071032d064e225349f420950e5
 
-PODFILE CHECKSUM: eaf34095cbc2404e7b8d71b9eeb919a9edadd2f8
+PODFILE CHECKSUM: e49847b612d812af48ca4bc3fe3c6ee89ddad5d4
 
 COCOAPODS: 1.9.3
