@@ -24,7 +24,9 @@ import EasyTracking
         if let id = configurationJSON?["client_identifier"] as? String{
             EasyTracker.setup(with: id, trackers: [EchoTracker("googleAnalytics")], completion: { error in
                 if (error == nil) {
-                    EasyTracker.debug = true
+                    #if DEBUG
+                        EasyTracker.debug = true
+                    #endif
                     if self.shouldTrackEvent {
                         EasyTracker.enable()
                     }
