@@ -26,8 +26,9 @@ import EasyTracking
             EasyTracker.setup(with: id, trackers: [IVWTracker(), EchoTracker("ivw")]) { [weak self] (error) in
                 if error == nil, self?.shouldTrackEvent == true {
                     EasyTracker.enable {
-                        let isDebug = configurationJSON?["debug_mode"] as? Bool ?? false
-                        EasyTracker.debug = isDebug
+                        let debugModeString = configurationJSON?["debug_mode"] as? NSString
+                        let isDebugEnabled = debugModeString?.boolValue ?? false
+                        EasyTracker.debug = isDebugEnabled
                         
                     }
                 }
