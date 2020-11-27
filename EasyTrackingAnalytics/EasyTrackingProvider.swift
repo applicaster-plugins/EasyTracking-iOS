@@ -21,17 +21,17 @@ import EasyTracking
         super.init()
         self.configurationJSON = configurationJSON
         //Easy tracking init
-        if let id = configurationJSON?["client_identifier"] as? String{
-            EasyTracker.setup(with: id, trackers: [EchoTracker("googleAnalytics")], completion: { error in
-                if (error == nil) {
-                    #if DEBUG
-                        EasyTracker.debug = true
-                    #endif
-                    if self.shouldTrackEvent {
-                        EasyTracker.enable()
+        if let id = configurationJSON?["client_identifier"] as? String {
+            EasyTracker.autoLoadTrackers = false
+            EasyTracker.setup(with: id, trackers: [IVWTracker(), EchoTracker("ivw")]) { [weak self] (error) in
+                if error == nil, self?.shouldTrackEvent == true {
+                    EasyTracker.enable {
+                        let isDebug = configurationJSON?["debug_mode"] as? Bool ?? false
+                        EasyTracker.debug = isDebug
+                        
                     }
                 }
-            })
+            }
         }
         
         //Parsing IVW Event List from Plugin Configurations
