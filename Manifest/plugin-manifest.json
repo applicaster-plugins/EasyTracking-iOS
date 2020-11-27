@@ -29,9 +29,9 @@
     {
         "key": "debug_mode",
         "label": "IVW debug mode",
-        "type": "switch",
-        "label_tooltip": "Enables debug mode for trackers",
-        "initial_value": "false"
+        "type": "checkbox",
+        "tooltip_text": "Enables debug mode for trackers",
+        "default": 0
     }
   ],
   "dependency_name": "EasyTrackingAnalytics",
@@ -46,7 +46,7 @@
 
   ],
   "identifier": "prosieben_easy_tracking",
-  "manifest_version": "0.5.1",
+  "manifest_version": "0.5.2",
   "min_zapp_sdk": "13.0.0-Dev",
   "name": "Easy Tracking",
   "npm_dependencies": [
