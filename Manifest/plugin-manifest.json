@@ -25,6 +25,13 @@
       "key": "ivw_config_json",
       "label": "IVW Screen mapping JSON configuration",
       "placeholder": "Enter screen mapping in JSON format"
+    },
+    {
+        "key": "debug_mode",
+        "label": "IVW debug mode",
+        "type": "switch",
+        "label_tooltip": "Enables debug mode for trackers",
+        "initial_value": "false"
     }
   ],
   "dependency_name": "EasyTrackingAnalytics",
