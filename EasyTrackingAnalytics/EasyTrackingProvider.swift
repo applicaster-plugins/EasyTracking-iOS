@@ -23,7 +23,12 @@ import EasyTracking
         //Easy tracking init
         if let id = configurationJSON?["client_identifier"] as? String {
             EasyTracker.autoLoadTrackers = false
-            EasyTracker.setup(with: id, trackers: [IVWTracker(), EchoTracker("ivw")]) { [weak self] (error) in
+            EasyTracker.setup(with: id, trackers: [IVWTracker(),
+                                                   EchoTracker("ivw"),
+                                                   GoogleAnalyticsTrackerSDK(),
+                                                   NielsenTracker(),
+                                                   NuragoTracker(),
+                                                   MixpanelTracker()]) { [weak self] (error) in
                 if error == nil, self?.shouldTrackEvent == true {
                     EasyTracker.enable {
                         let debugModeString = configurationJSON?["debug_mode"] as? NSString
