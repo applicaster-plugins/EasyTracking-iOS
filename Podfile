@@ -20,7 +20,7 @@ target 'EasyTrackingAnalytics' do
  pod 'EasyTracking/EchoTracker'
  pod 'EasyTracking/GoogleAnalytics'
  pod 'EasyTracking/INFOnline'
- pod 'EasyTracking/Nielsen'
+# pod 'EasyTracking/Nielsen'
  pod 'EasyTracking/Mixpanel'
  pod 'EasyTracking/Nurago'
  pod 'OasisJSBridge', '=0.3.8'
