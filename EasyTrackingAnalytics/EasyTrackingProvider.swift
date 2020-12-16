@@ -26,7 +26,6 @@ import EasyTracking
             EasyTracker.setup(with: id, trackers: [IVWTracker(),
                                                    EchoTracker("ivw"),
                                                    GoogleAnalyticsTrackerSDK(),
-                                                   NielsenTracker(),
                                                    NuragoTracker(),
                                                    MixpanelTracker()]) { [weak self] (error) in
                 if error == nil, self?.shouldTrackEvent == true {
