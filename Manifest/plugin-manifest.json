@@ -46,7 +46,7 @@
 
   ],
   "identifier": "prosieben_easy_tracking",
-  "manifest_version": "0.5.2",
+  "manifest_version": "0.5.3",
   "min_zapp_sdk": "13.0.0-Dev",
   "name": "Easy Tracking",
   "npm_dependencies": [
