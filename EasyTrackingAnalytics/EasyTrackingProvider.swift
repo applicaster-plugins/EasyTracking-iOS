@@ -62,7 +62,7 @@ import EasyTracking
                                                   object: nil)
     }
     
-    public func getTrackPermission() {
+    private func getTrackPermission() {
         let dic = UserDefaults.standard.dictionary(forKey: "CMPConsents")
         if let canTrack = dic?["Google Analytics"] as? Bool{
             shouldTrackEvent = canTrack
@@ -98,7 +98,7 @@ import EasyTracking
         
     }
     
-    @objc public func trackEvent(_ eventName:String, timed:Bool) {
+    @objc private func trackEvent(_ eventName:String, timed:Bool) {
         trackEvent(eventName, parameters: [String : NSObject](), completion: nil)
     }
     
@@ -106,7 +106,7 @@ import EasyTracking
         
     }
     
-    public func trackEvent(_ eventName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
+    private func trackEvent(_ eventName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
         var modifiedParameters: [String: Any] = parameters
         
         //If necessary add IVW code
@@ -125,7 +125,7 @@ import EasyTracking
         completion?(true, nil)
     }
 
-    public func trackScreenView(_ screenName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
+    private func trackScreenView(_ screenName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
         
         var modifiedParameters: [String: Any] = parameters
         
