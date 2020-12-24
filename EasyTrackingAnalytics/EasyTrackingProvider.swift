@@ -8,10 +8,12 @@ import Foundation
 import ZappPlugins
 import EasyTracking
 
-@objc public class EasyTrackingProvider: NSObject, ZPAnalyticsProviderProtocol {
+@objc public class EasyTrackingProvider: NSObject, AnalyticsProviderProtocol {
     
     let IVW_CODE = "marketingCategory"
     
+    public var model: ZPPluginModel?
+    public var providerName: String = ""
     public var configurationJSON: NSDictionary?
     private var shouldTrackEvent = true
     private var lastScreenEvent: String?
@@ -48,6 +50,10 @@ import EasyTracking
                                                object: nil)
     }
     
+    public required init(pluginModel: ZPPluginModel) {
+        
+    }
+    
     public required override init() {}
     
     deinit {
@@ -56,11 +62,48 @@ import EasyTracking
                                                   object: nil)
     }
     
-    public func getTrackPermission(){
+    public func getTrackPermission() {
         let dic = UserDefaults.standard.dictionary(forKey: "CMPConsents")
         if let canTrack = dic?["Google Analytics"] as? Bool{
             shouldTrackEvent = canTrack
         }
+    }
+
+    public func sendEvent(_ eventName: String, parameters: [String: Any]?) {
+        var parametersToPass: [String: NSObject] = [:]
+        if let parameters = parameters as? [String: NSObject] {
+            parametersToPass = parameters
+        }
+        trackEvent(eventName, parameters: parametersToPass, completion: nil)
+    }
+
+    public func sendScreenEvent(_ screenName: String, parameters: [String: Any]?) {
+        var parametersToPass: [String: NSObject] = [:]
+        if let parameters = parameters as? [String: NSObject] {
+            parametersToPass = parameters
+        }
+        trackScreenView(screenName, parameters: parametersToPass, completion: nil)
+    }
+
+    @objc public func startObserveTimedEvent(_ eventName: String, parameters: [String: Any]?) {
+        trackEvent(eventName, timed: true)
+    }
+
+    @objc public func stopObserveTimedEvent(_ eventName: String, parameters: [String: Any]?) {
+        var parametersToPass: [String: NSObject] = [:]
+        if let parameters = parameters as? [String: NSObject] {
+            parametersToPass = parameters
+        }
+        endTimedEvent(eventName, parameters: parametersToPass)
+        
+    }
+    
+    @objc public func trackEvent(_ eventName:String, timed:Bool) {
+        
+    }
+    
+    @objc public func endTimedEvent(_ eventName:String, parameters:[String:NSObject]) {
+        
     }
     
     public func trackEvent(_ eventName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
@@ -81,51 +124,7 @@ import EasyTracking
         
         completion?(true, nil)
     }
-    
-    public func presentToastForLoggedEvent(_ eventDescription: String?) {
-        
-    }
-    
-    public func canPresentToastForLoggedEvents() -> Bool {
-        return false
-    }
-    
-    public func shouldTrackEvent(_ eventName: String) -> Bool {
-        return true
-    }
-    
-    public func analyticsMaxParametersAllowed() -> Int {
-        return 100
-    }
-    
-    public func setBaseParameter(_ value: NSObject?, forKey key: String) {
-        
-    }
-    
-    public func sortPropertiesAlphabeticallyAndCutThemByLimitation(_ properties: [String : NSObject]) -> [String : NSObject] {
-        return ["":NSObject()]
-    }
-    
-    public func createAnalyticsProvider(_ allProvidersSetting: [String : NSObject]) -> Bool {
-        return true
-    }
-    
-    public func configureProvider() -> Bool {
-        return true
-    }
-    
-    public func getKey() -> String {
-        return ""
-    }
-    
-    public func updateGenericUserProperties(_ genericUserProfile: [String : NSObject]) {
-        
-    }
-    
-    public func updateDefaultEventProperties(_ eventProperties: [String : NSObject]) {
-        
-    }
-    
+
     public func trackScreenView(_ screenName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
         
         var modifiedParameters: [String: Any] = parameters
@@ -150,6 +149,14 @@ import EasyTracking
            isScreenView == true {
             trackScreenView(eventName, parameters: [:], completion: nil)
         }
+    }
+    
+    public func prepareProvider(_ defaultParams: [String : Any], completion: ((Bool) -> Void)?) {
+        
+    }
+    
+    public func disable(completion: ((Bool) -> Void)?) {
+        
     }
     
     // MARK: IVW Logic
