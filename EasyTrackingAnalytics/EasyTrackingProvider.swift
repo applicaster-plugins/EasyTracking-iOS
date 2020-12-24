@@ -50,8 +50,8 @@ import EasyTracking
                                                object: nil)
     }
     
-    public required init(pluginModel: ZPPluginModel) {
-        
+    public required convenience init(pluginModel: ZPPluginModel) {
+        self.init(configurationJSON: pluginModel.configurationJSON)
     }
     
     public required override init() {}
@@ -99,10 +99,10 @@ import EasyTracking
     }
     
     @objc public func trackEvent(_ eventName:String, timed:Bool) {
-        
+        trackEvent(eventName, parameters: [String : NSObject](), completion: nil)
     }
     
-    @objc public func endTimedEvent(_ eventName:String, parameters:[String:NSObject]) {
+    @objc private func endTimedEvent(_ eventName:String, parameters:[String:NSObject]) {
         
     }
     
@@ -156,7 +156,7 @@ import EasyTracking
     }
     
     public func disable(completion: ((Bool) -> Void)?) {
-        
+        shouldTrackEvent = false
     }
     
     // MARK: IVW Logic
