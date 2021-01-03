@@ -14,8 +14,8 @@ jobs:
       - PROJECT_NAME: "EasyTrackingAnalytics"
       - SCRIPTS_LOCAL_FOLDER: "~/.scripts-iOS"
       - SCRIPTS_REPO_PATH: "git@github.com:applicaster/Scripts-iOS.git"
-      - DEPLOY_VERSION: "0.17.5"
-      - DEPLOY_COMMAND: "~/.scripts-iOS/circleCi/deploySinglePlugin.sh"
+      - DEPLOY_VERSION: "0.17.8"
+      - DEPLOY_COMMAND: "~/.scripts-iOS/circleCi/deploySinglePluginPrivate.sh"
     working_directory: ~/EasyTracking-iOS
 
     steps:
@@ -109,7 +109,7 @@ jobs:
 
       # Deploy
       - deploy:
-          name: Creating Closed SDK version
+          name: Creating SDK version
           command: |
             if [ "$CIRCLE_BRANCH" = "master" ];
             then
