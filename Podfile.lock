@@ -1,19 +1,21 @@
 PODS:
-  - EasyTracking/Core (1.6.7):
-    - OasisJSBridge
-  - EasyTracking/EchoTracker (1.6.7):
+  - CMP (0.1.2)
+  - EasyTracking/Core (1.8.1):
+    - OasisJSBridge (>= 0.3.12)
+  - EasyTracking/EchoTracker (1.8.1):
     - EasyTracking/Core
-  - EasyTracking/GoogleAnalytics (1.6.7):
+  - EasyTracking/GoogleAnalytics (1.8.1):
     - EasyTracking/Core
     - GoogleAnalyticsWrapper (= 3.17.0.4)
-  - EasyTracking/INFOnline (1.6.7):
+  - EasyTracking/INFOnline (1.8.1):
     - EasyTracking/Core
-  - EasyTracking/Mixpanel (1.6.7):
+    - EasyTracking/INFOnlineSurvey
+  - EasyTracking/INFOnlineSurvey (1.8.1):
+    - EasyTracking/Core
+  - EasyTracking/Mixpanel (1.8.1):
     - EasyTracking/Core
     - Mixpanel-swift (= 2.7.5)
-  - EasyTracking/Nielsen (1.6.7):
-    - EasyTracking/Core
-  - EasyTracking/Nurago (1.6.7):
+  - EasyTracking/Nurago (1.8.1):
     - EasyTracking/Core
     - S2S-SDK (= 1.11.5)
     - S2S-SDK-TVOS (= 1.11.5)
@@ -25,30 +27,32 @@ PODS:
   - Mixpanel-swift (2.7.5):
     - Mixpanel-swift/Complete (= 2.7.5)
   - Mixpanel-swift/Complete (2.7.5)
-  - OasisJSBridge (0.3.8)
+  - OasisJSBridge (0.3.12)
   - S2S-SDK (1.11.5)
   - ZappCore (0.9.18)
-  - ZappPlugins (11.8.0):
+  - ZappPlugins (12.0.0):
     - ZappCore
 
 DEPENDENCIES:
-  - EasyTracking/EchoTracker
-  - EasyTracking/GoogleAnalytics
-  - EasyTracking/INFOnline
-  - EasyTracking/Mixpanel
-  - EasyTracking/Nielsen
-  - EasyTracking/Nurago
-  - OasisJSBridge (= 0.3.8)
+  - CMP
+  - EasyTracking/EchoTracker (= 1.8.1)
+  - EasyTracking/GoogleAnalytics (= 1.8.1)
+  - EasyTracking/INFOnline (= 1.8.1)
+  - EasyTracking/Mixpanel (= 1.8.1)
+  - EasyTracking/Nurago (= 1.8.1)
+  - OasisJSBridge (= 0.3.12)
   - ZappPlugins
 
 SPEC REPOS:
+  "git@github.com:applicaster/CocoaPods-Private.git":
+    - CMP
   "git@github.com:applicaster/CocoaPods.git":
     - ZappCore
     - ZappPlugins
   "https://7sports-applicaster-token:MZ3z_WMeyR6HxmZ1c9Y2@gitlab.p7s1.io/platforms-ios/CocoaPods-Specs.git":
     - EasyTracking
     - GoogleAnalyticsWrapper
-  trunk:
+  https://cdn.cocoapods.org/:
     - GoogleAnalytics
     - GoogleIDFASupport
     - Mixpanel-swift
@@ -56,16 +60,17 @@ SPEC REPOS:
     - S2S-SDK
 
 SPEC CHECKSUMS:
-  EasyTracking: 8bf1b9fb971ea569803bafa33d98e3312519f31b
+  CMP: 3d9f287ede15cc0149ccd85850aa1c47f654b1e7
+  EasyTracking: 9f5a56abbf97373e371e7656af926e64046aae96
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
-  GoogleAnalyticsWrapper: 41349f9395b5830e43fc92656630698ac6fcda13
+  GoogleAnalyticsWrapper: f7e34c9aba9fbaacd7a7cb3ea4434b7e8e4bbabe
   GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
   Mixpanel-swift: 8a9449f08319f456ca501d86e0c6cfd33a546c86
-  OasisJSBridge: 13b21eb8b6f98bedbf3d1a27bfa896d0f5f611bf
+  OasisJSBridge: 0440bbf57c78ed0d10acc4ba57c227ca6f9a9561
   S2S-SDK: ada3b92142b83a37c29c1335bfe5056d3ded45d2
   ZappCore: cc45ec2514e5cf879593a58e60b1815a7abe0048
-  ZappPlugins: c989f6ebf539f0071032d064e225349f420950e5
+  ZappPlugins: 4c436796b3a9ac8b89cd46a8f42e58acb3fbafc3
 
-PODFILE CHECKSUM: e49847b612d812af48ca4bc3fe3c6ee89ddad5d4
+PODFILE CHECKSUM: 615ebee65f17570437f8e428b658cf9e6fa87e51
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

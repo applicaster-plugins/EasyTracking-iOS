@@ -11,19 +11,21 @@
  	Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
  end
 
+EasyTrackingVersion = '=1.8.1'
+
 target 'EasyTrackingAnalytics' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for EasyTrackingAnalytics
- pod 'ZappPlugins'
- pod 'EasyTracking/EchoTracker'
- pod 'EasyTracking/GoogleAnalytics'
- pod 'EasyTracking/INFOnline'
-# pod 'EasyTracking/Nielsen'
- pod 'EasyTracking/Mixpanel'
- pod 'EasyTracking/Nurago'
- pod 'OasisJSBridge', '=0.3.8'
+  pod 'ZappPlugins'
+  pod 'EasyTracking/EchoTracker', EasyTrackingVersion
+  pod 'EasyTracking/GoogleAnalytics', EasyTrackingVersion
+  pod 'EasyTracking/INFOnline', EasyTrackingVersion
+  pod 'EasyTracking/Mixpanel', EasyTrackingVersion
+  pod 'EasyTracking/Nurago', EasyTrackingVersion
+  pod 'OasisJSBridge', '=0.3.12'
+  pod 'CMP'
 
   target 'EasyTrackingAnalyticsTests' do
     # inherit! :search_paths

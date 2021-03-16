@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		07BF12722534EF140066D6E1 /* IVWEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BF12712534EF140066D6E1 /* IVWEvent.swift */; };
+		07C342BA26015F3700199E3B /* PersonalizationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C342B926015F3700199E3B /* PersonalizationObserver.swift */; };
+		07C342BE26015F4300199E3B /* EasyTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C342BD26015F4300199E3B /* EasyTrackingHelper.swift */; };
 		1DEFB58124923AED0091A3C4 /* EasyTrackingAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEFB57724923AED0091A3C4 /* EasyTrackingAnalytics.framework */; };
 		1DEFB58624923AED0091A3C4 /* EasyTrackingAnalyticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEFB58524923AED0091A3C4 /* EasyTrackingAnalyticsTests.swift */; };
 		1DEFB58824923AED0091A3C4 /* EasyTrackingAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DEFB57A24923AED0091A3C4 /* EasyTrackingAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		07BF12712534EF140066D6E1 /* IVWEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IVWEvent.swift; sourceTree = "<group>"; };
+		07C342B926015F3700199E3B /* PersonalizationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalizationObserver.swift; sourceTree = "<group>"; };
+		07C342BD26015F4300199E3B /* EasyTrackingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTrackingHelper.swift; sourceTree = "<group>"; };
 		1D62BA5F249F6A670008F9E1 /* libAdIdAccessLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdIdAccessLibrary.a; path = Pods/GoogleIDFASupport/Libraries/libAdIdAccessLibrary.a; sourceTree = "<group>"; };
 		1DEFB57724923AED0091A3C4 /* EasyTrackingAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyTrackingAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEFB57A24923AED0091A3C4 /* EasyTrackingAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyTrackingAnalytics.h; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		1DEFB57924923AED0091A3C4 /* EasyTrackingAnalytics */ = {
 			isa = PBXGroup;
 			children = (
+				07C342BD26015F4300199E3B /* EasyTrackingHelper.swift */,
+				07C342B926015F3700199E3B /* PersonalizationObserver.swift */,
 				07BF12712534EF140066D6E1 /* IVWEvent.swift */,
 				1DEFB59124923CD50091A3C4 /* EasyTrackingProvider.swift */,
 				1DEFB57A24923AED0091A3C4 /* EasyTrackingAnalytics.h */,
@@ -315,6 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C342BE26015F4300199E3B /* EasyTrackingHelper.swift in Sources */,
+				07C342BA26015F3700199E3B /* PersonalizationObserver.swift in Sources */,
 				1DEFB59224923CD50091A3C4 /* EasyTrackingProvider.swift in Sources */,
 				07BF12722534EF140066D6E1 /* IVWEvent.swift in Sources */,
 			);

@@ -1,3 +1,5 @@
+EasyTrackingVersion = '=1.8.1'
+
 Pod::Spec.new do |s|
   s.name             = "EasyTrackingAnalytics"
   s.version          = '0.6.0'
@@ -23,11 +25,11 @@ Pod::Spec.new do |s|
                 }
 
   s.dependency 'ZappPlugins'
-  s.dependency 'EasyTracking/EchoTracker'
-  s.dependency 'EasyTracking/GoogleAnalytics'
-  s.dependency 'EasyTracking/INFOnline'
-  s.dependency 'EasyTracking/Mixpanel'
-  s.dependency 'EasyTracking/Nurago'
-  s.dependency 'ZappATTPreparation'
+  s.dependency 'EasyTracking/EchoTracker', EasyTrackingVersion
+  s.dependency 'EasyTracking/GoogleAnalytics', EasyTrackingVersion
+  s.dependency 'EasyTracking/INFOnline', EasyTrackingVersion
+  s.dependency 'EasyTracking/Mixpanel', EasyTrackingVersion
+  s.dependency 'EasyTracking/Nurago', EasyTrackingVersion
+  s.dependency 'CMP'
 
 end
