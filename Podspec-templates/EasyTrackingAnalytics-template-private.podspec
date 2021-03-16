@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
   s.dependency 'EasyTracking/EchoTracker'
   s.dependency 'EasyTracking/GoogleAnalytics'
   s.dependency 'EasyTracking/INFOnline'
-  # s.dependency 'EasyTracking/Nielsen'
   s.dependency 'EasyTracking/Mixpanel'
   s.dependency 'EasyTracking/Nurago'
+  s.dependency 'ZappATTPreparation'
 
 end

@@ -7,45 +7,27 @@
 import Foundation
 import ZappPlugins
 import EasyTracking
+import CMP
 
 @objc public class EasyTrackingProvider: NSObject, ZPAnalyticsProviderProtocol {
     
     let IVW_CODE = "marketingCategory"
     
     public var configurationJSON: NSDictionary?
-    private var shouldTrackEvent = true
     private var lastScreenEvent: String?
-    private static var ivwEvents: [IVWEvent] = []
+    static var ivwEvents: [IVWEvent] = []
     
     public required init(configurationJSON: NSDictionary?) {
         super.init()
         self.configurationJSON = configurationJSON
-        //Easy tracking init
-        if let id = configurationJSON?["client_identifier"] as? String {
-            EasyTracker.autoLoadTrackers = false
-            EasyTracker.setup(with: id, trackers: [IVWTracker(),
-                                                   EchoTracker("ivw"),
-                                                   GoogleAnalyticsTrackerSDK(),
-                                                   NuragoTracker(),
-                                                   MixpanelTracker()]) { [weak self] (error) in
-                if error == nil, self?.shouldTrackEvent == true {
-                    EasyTracker.enable {
-                        let debugModeString = configurationJSON?["debug_mode"] as? NSString
-                        let isDebugEnabled = debugModeString?.boolValue ?? false
-                        EasyTracker.debug = isDebugEnabled
-                        
-                    }
-                }
-            }
-        }
         
-        //Parsing IVW Event List from Plugin Configurations
-        EasyTrackingProvider.ivwEvents = getIVWEvents()
-        
+        EasyTrackingHelper.EasyTrackingInit(with: configurationJSON)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(trackScreenEventNotification(_:)),
                                                name: Notification.Name("logScreenEvent"),
                                                object: nil)
+        
+        PersonalizationObserver.shared.subscribe(with: configurationJSON)
     }
     
     public required override init() {}
@@ -56,10 +38,12 @@ import EasyTracking
                                                   object: nil)
     }
     
+    
+    
     public func getTrackPermission(){
         let dic = UserDefaults.standard.dictionary(forKey: "CMPConsents")
         if let canTrack = dic?["Google Analytics"] as? Bool{
-            shouldTrackEvent = canTrack
+            EasyTrackingHelper.shouldTrackEvent = canTrack
         }
     }
     
@@ -158,7 +142,7 @@ import EasyTracking
         case Action
     }
     
-    func getIVWEvents() -> [IVWEvent] {
+    static func getIVWEvents(with configurationJSON: NSDictionary?) -> [IVWEvent] {
         guard let json = configurationJSON?["ivw_config_json"] as? String else {
             return []
         }
